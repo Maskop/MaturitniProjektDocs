@@ -1,0 +1,12 @@
+\babel@toc {nil}{}\relax 
+\contentsline {chapter}{\numberline {1}Úvod}{1}{chapter.1}%
+\contentsline {chapter}{\numberline {2}Linuxářská dokumentace}{2}{chapter.2}%
+\contentsline {section}{\numberline {2.1}I use arch BTW}{2}{section.2.1}%
+\contentsline {chapter}{\numberline {3}Programátorská dokumentace}{3}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Proč arch linux?}{3}{section.3.1}%
+\contentsline {section}{\numberline {3.2}Architektura aplikace}{3}{section.3.2}%
+\contentsline {section}{\numberline {3.3}Použité technologie a nástroje}{3}{section.3.3}%
+\contentsline {section}{\numberline {3.4}Instalace a spuštění}{3}{section.3.4}%
+\contentsline {section}{\numberline {3.5}Popis důležitých částí kódu}{3}{section.3.5}%
+\contentsline {chapter}{\numberline {4}Uživatelská dokumentace}{4}{chapter.4}%
+\contentsline {chapter}{\numberline {5}Závěr}{5}{chapter.5}%
