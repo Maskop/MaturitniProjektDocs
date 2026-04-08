@@ -1,0 +1,66 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.3 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{ynt/global//global/global/global}
+    \entry{HyprlandWiki2026}{online}{}{}
+      \name{author}{1}{}{%
+        {{hash=1642d0d468f5d4d5c82e3e6f2c1e1334}{%
+           family={Contributors},
+           familyi={C\bibinitperiod},
+           given={Hyprland},
+           giveni={H\bibinitperiod}}}%
+      }
+      \strng{namehash}{1642d0d468f5d4d5c82e3e6f2c1e1334}
+      \strng{fullhash}{1642d0d468f5d4d5c82e3e6f2c1e1334}
+      \strng{fullhashraw}{1642d0d468f5d4d5c82e3e6f2c1e1334}
+      \strng{bibnamehash}{1642d0d468f5d4d5c82e3e6f2c1e1334}
+      \strng{authorbibnamehash}{1642d0d468f5d4d5c82e3e6f2c1e1334}
+      \strng{authornamehash}{1642d0d468f5d4d5c82e3e6f2c1e1334}
+      \strng{authorfullhash}{1642d0d468f5d4d5c82e3e6f2c1e1334}
+      \strng{authorfullhashraw}{1642d0d468f5d4d5c82e3e6f2c1e1334}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{The documentation for Hyprland.}
+      \field{day}{4}
+      \field{langid}{english}
+      \field{month}{4}
+      \field{title}{Hyprland {{Wiki}}}
+      \field{urlday}{7}
+      \field{urlmonth}{4}
+      \field{urlyear}{2026}
+      \field{year}{2026}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \verb{file}
+      \verb /home/maskop/Zotero/storage/N9IYG8PB/wiki.hypr.land.html
+      \endverb
+      \verb{urlraw}
+      \verb https://wiki.hypr.land/
+      \endverb
+      \verb{url}
+      \verb https://wiki.hypr.land/
+      \endverb
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+

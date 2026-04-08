@@ -15,3 +15,11 @@
 \contentsline {subsection}{\numberline {3.7}Popis důležitých částí kódu}{5}{subsection.3.7}%
 \contentsline {section}{\numberline {4}Uživatelská dokumentace}{6}{section.4}%
 \contentsline {section}{\numberline {5}Závěr}{7}{section.5}%
+\babel@toc {english}{}\relax 
+\babel@toc {czech}{}\relax 
+\babel@toc {english}{}\relax 
+\babel@toc {czech}{}\relax 
+\babel@toc {english}{}\relax 
+\babel@toc {czech}{}\relax 
+\babel@toc {english}{}\relax 
+\babel@toc {czech}{}\relax 
