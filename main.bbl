@@ -79,6 +79,30 @@
       \verb https://wiki.archlinux.org/title/Main_page
       \endverb
     \endentry
+    \entry{Quickshell}{online}{}{}
+      \list{organization}{1}{%
+        {quickshell}%
+      }
+      \field{sortinit}{9}
+      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Quickshell Type Documentation}
+      \field{langid}{english}
+      \field{title}{Quickshell}
+      \field{urlday}{8}
+      \field{urlmonth}{4}
+      \field{urlyear}{2026}
+      \field{urldateera}{ce}
+      \verb{file}
+      \verb /home/maskop/Zotero/storage/CSFW62PW/types.html
+      \endverb
+      \verb{urlraw}
+      \verb https://quickshell.org/docs/v0.2.1/types/
+      \endverb
+      \verb{url}
+      \verb https://quickshell.org/docs/v0.2.1/types/
+      \endverb
+    \endentry
   \enddatalist
 \endrefsection
 \endinput

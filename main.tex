@@ -95,13 +95,22 @@
 
 % Abstrakt
 \begin{abstract}
-Tato práce se zabývá vývojem dotykově orientovaného uživatelského rozhraní pro Arch Linuxový systém,
-umožňující ovládání počítače pomocí dotykových gest a stylusu. Cílem projektu bylo vytvořit modularní, 
-konfigurovatelný systém, který podporuje notifikace, multimediální gesty a dynamické přepínání pracovních
-prostředí s minimálním využitím klávesových zkratek. Postup zahrnoval nejprve konfiguraci dual‑bootu a ruční 
-instalaci systému, následně návrh UI v deklarativním jazyce QML a integraci s správci prostředí
-Hyprland a QuickShell. Výsledkem je funkční prostředí, kde každá aplikace může nastavit vzhled a chování notifikací, a stylus 
-modul rozpoznává tlak a směr, což umožňuje kreslení, psaní a gesty jako pinch‑to‑zoom či swipe‑to‑click.
+% Tato práce se zabývá vývojem dotykově orientovaného uživatelského rozhraní pro Arch Linuxový systém,
+% umožňující ovládání počítače pomocí dotykových gest a stylusu. Cílem projektu bylo vytvořit modularní, 
+% konfigurovatelný systém, který podporuje notifikace, multimediální gesty a dynamické přepínání pracovních
+% prostředí s minimálním využitím klávesových zkratek. Postup zahrnoval nejprve konfiguraci dual‑bootu a ruční 
+% instalaci systému, následně návrh UI v deklarativním jazyce QML a integraci s správci prostředí
+% Hyprland a QuickShell. Výsledkem je funkční prostředí, kde každá aplikace může nastavit vzhled a chování notifikací, a stylus 
+% modul rozpoznává tlak a směr, což umožňuje kreslení, psaní a gesty jako pinch‑to‑zoom či swipe‑to‑click.
+
+Tato práce se zabývá vývojem dotykově orientovaného uživatelského rozhraní pro Arch Linux\autocite{ArchWiki}, umožňující
+ovládání počítače pomocí dotykových gest a stylusu. Cílem projektu bylo vytvořit modularní,
+konfigurovatelný systém, který podporuje notifikace a dynamické přepínání pracovních prostředí. 
+Projekt je postaven na frameworku QuickShell, ve kterém je navrhnuto veškeré UI tohoto projektu.
+QuickShell\autocite{Quickshell} je rozhraní mezi deklarativním jazykem QML a operačním systémem.
+Pro správu oken, pracovních prostředí a klávesových zkratek používáme moderní tiling manager a
+compositor Hyprland\autocite{HyprlandWiki2026}.
+Výsledkem je uživatelské prostředí, jehož účinnost a vzhled zbytečně nezatěžuje počítač. 
 \end{abstract}
 \newpage
 
@@ -113,35 +122,49 @@ modul rozpoznává tlak a směr, což umožňuje kreslení, psaní a gesty jako 
 
 % Úvod
 \section{Úvod}
-V posledních letech se stále častěji setkáváme s hybridními zařízeními, která umožňují kombinovat
-výhody počítače s mobilní aplikací. Jedním z těchto zařízení je Microsoft Surface, které se díky 
-své všestrannosti stalo nepostradatelným nástrojem pro psaní poznámek, kreslení a programování. 
-Přestože toto zařízení využívám pravidelně, jsem nucen spoléhat na operační systém Windows, který 
-na mém hlavním počítači již dlouho neplní žádnou roli. Tento rozdíl v prostředí mi způsobil 
-nepříjemnost – musím přepínat mezi dvěma oddělenými systémy, což narušuje plynulost mé práce a 
-snižuje produktivitu. Z toho vyplývá přímý motivací k vytvoření prostředí, kde by všechny mé požadavky 
-– psaní, programování a vizuální interakce – byly centrálně zajištěny v jediném operačním systému, 
-přičemž by toto prostředí bylo přizpůsobeno mému osobnímu stylu a preferencím.
+% V posledních letech se stále častěji setkáváme s hybridními zařízeními, která umožňují kombinovat
+% výhody počítače s mobilní aplikací. Jedním z těchto zařízení je Microsoft Surface, které se díky 
+% své všestrannosti stalo nepostradatelným nástrojem pro psaní poznámek, kreslení a programování. 
+% Přestože toto zařízení využívám pravidelně, jsem nucen spoléhat na operační systém Windows, který 
+% na mém hlavním počítači již dlouho neplní žádnou roli. Tento rozdíl v prostředí mi způsobil 
+% nepříjemnost – musím přepínat mezi dvěma oddělenými systémy, což narušuje plynulost mé práce a 
+% snižuje produktivitu. Z toho vyplývá přímý motivací k vytvoření prostředí, kde by všechny mé požadavky 
+% – psaní, programování a vizuální interakce – byly centrálně zajištěny v jediném operačním systému, 
+% přičemž by toto prostředí bylo přizpůsobeno mému osobnímu stylu a preferencím.
+%
+% Cílem této práce je navrhnout a implementovat uživatelské rozhraní na archlinuxu, které bude 
+% podporovat dotykové a stylusové vstupy, umožní snadné přepínání mezi aplikacemi, bude esteticky 
+% přitažlivé a zároveň bude nabízet široké možnosti přizpůsobení. Klíčové funkce, které se mají 
+% realizovat, zahrnují notifikace, dynamické přemisťování a uzavírání aplikací po obrazovce, a to 
+% s cílem minimalizovat potřebu klávesových zkratek a zvýšit intuitivní ovládání. Výsledkem by měl 
+% být systém, který se stane centrem mého každodenního pracovního toku, a to bez nutnosti častého 
+% přepínání mezi Windows a Linuxem.
+%
+% Metodologicky bude práce postupovat ve více fázích. Nejprve provedeme konfiguraci archlinuxu s 
+% ohledem na optimalizaci pro Surface hardware, včetně nastavení driverů a podporujícího softwaru. 
+% Dále se zaměříme na návrh UI v deklarativním jazyce QML, čímž zajistíme snadnou přizpůsobitelnost 
+% vzhledu a chování komponent. Následuje vývoj modulu pro správu notifikací a interaktivních gest, 
+% následovaný testováním a laděním výkonu. Ve finální fázi se zabýváme dokumentací a popisem 
+% architektury projektu, což umožní čtenáři snadné nasazení a údržbu systému.
+%
+% Na začátku této práce je zde uveden přehled architektury – jaké moduly tvoří celkový systém, 
+% jaké nástroje a programovací jazyky byly využity, a krok za krokem průvodce instalací
+% na archlinuxu. Tímto způsobem je zajištěno, že i laik bez předchozího znalostního základu 
+% může přistoupit k instalaci a využití vývojového prostředí, které jsem pro sebe vytvořil.
 
-Cílem této práce je navrhnout a implementovat uživatelské rozhraní na archlinuxu, které bude 
-podporovat dotykové a stylusové vstupy, umožní snadné přepínání mezi aplikacemi, bude esteticky 
-přitažlivé a zároveň bude nabízet široké možnosti přizpůsobení. Klíčové funkce, které se mají 
-realizovat, zahrnují notifikace, dynamické přemisťování a uzavírání aplikací po obrazovce, a to 
-s cílem minimalizovat potřebu klávesových zkratek a zvýšit intuitivní ovládání. Výsledkem by měl 
-být systém, který se stane centrem mého každodenního pracovního toku, a to bez nutnosti častého 
-přepínání mezi Windows a Linuxem.
+V posledních letech se můžeme čím dál tím častěji setkávat s konceptem tzv. hybridních zařízení,
+která jsou kombinací mobilních a desktopových platforem a přináší jak výhody, tak nevýhody obou
+zařízení. Jedním z těchto zařízení je Microsoft Surface, který je mým každodenním společníkem
+jak pro práci, programování a zápis poznámek, tak pro mé pokusy o kreslení. 
+Přestože toto zařízení využívám pravidelně, jsem nucen používat na některé aktivity operační
+systém Windows, který jsem již dávno na svém desktopu vyměnil za linux. Tento rozdíl v prostředí
+mi velmi znepříjemňoval práci a obecně mé aktivity na laptopu. Z tohoto důvodu jsem se 
+rozhodl pro vytvoření optimálního systému, které by splňovalo většinu mých požadavků na 
+dotykové používání a programování. 
 
-Metodologicky bude práce postupovat ve více fázích. Nejprve provedeme konfiguraci archlinuxu s 
-ohledem na optimalizaci pro Surface hardware, včetně nastavení driverů a podporujícího softwaru. 
-Dále se zaměříme na návrh UI v deklarativním jazyce QML, čímž zajistíme snadnou přizpůsobitelnost 
-vzhledu a chování komponent. Následuje vývoj modulu pro správu notifikací a interaktivních gest, 
-následovaný testováním a laděním výkonu. Ve finální fázi se zabýváme dokumentací a popisem 
-architektury projektu, což umožní čtenáři snadné nasazení a údržbu systému.
+% Avšak protože laptopy této kategorie mají často problém s adaptací UI pro dotykové
+% ovládání, rozhodl jsem se pro vytvoření uživatelského rozhraní pro linux.
 
-Na začátku této práce je zde uveden přehled architektury – jaké moduly tvoří celkový systém, 
-jaké nástroje a programovací jazyky byly využity, a krok za krokem průvodce instalací
-na archlinuxu. Tímto způsobem je zajištěno, že i laik bez předchozího znalostního základu 
-může přistoupit k instalaci a využití vývojového prostředí, které jsem pro sebe vytvořil.
 
 % Linux dokumentace
 \section{Linuxářská dokumentace}
@@ -167,7 +190,7 @@ téměř jakýkoliv hardwarový nebo softwarový problém. Jeho komunitní podpo
 PKGBUILD‑ů a AUR zdrojů, dělá Arch Linux ideální platformou pro vývoj moderního, plně 
 přizpůsobitelného UI, které vyžaduje vysokou míru kontroly a neustálou aktualizaci.
 
-\subsection{Tiling manger VS Desktop Manager}
+\subsection{Tiling manger VS Floating Manager}
 Vycházíme z principů efektivity a minimalistického designu, které jsou v linuxovém prostředí klíčové.
 Tiling window manager, konkrétně Hyprland, byl zvolen právě pro svou schopnost maximalizovat využití 
 dostupných hardwarových prostředků. Na rozdíl od typických desktopových prostředí, kde je spousta 
