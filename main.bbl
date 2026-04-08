@@ -18,7 +18,50 @@
 
 
 \refsection{0}
-  \datalist[entry]{ynt/global//global/global/global}
+  \datalist[entry]{none/global//global/global/global}
+    \entry{ArchWiki}{online}{}{}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labeltitlesource}{title}
+      \field{title}{{{ArchWiki}}}
+      \field{urlday}{8}
+      \field{urlmonth}{4}
+      \field{urlyear}{2026}
+      \field{urldateera}{ce}
+      \verb{file}
+      \verb /home/maskop/Zotero/storage/FZ7BPLE9/Main_page.html
+      \endverb
+      \verb{urlraw}
+      \verb https://wiki.archlinux.org/title/Main_page
+      \endverb
+      \verb{url}
+      \verb https://wiki.archlinux.org/title/Main_page
+      \endverb
+    \endentry
+    \entry{Quickshell}{online}{}{}
+      \list{organization}{1}{%
+        {quickshell}%
+      }
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Quickshell Type Documentation}
+      \field{langid}{english}
+      \field{title}{Quickshell}
+      \field{urlday}{8}
+      \field{urlmonth}{4}
+      \field{urlyear}{2026}
+      \field{urldateera}{ce}
+      \verb{file}
+      \verb /home/maskop/Zotero/storage/CSFW62PW/types.html
+      \endverb
+      \verb{urlraw}
+      \verb https://quickshell.org/docs/v0.2.1/types/
+      \endverb
+      \verb{url}
+      \verb https://quickshell.org/docs/v0.2.1/types/
+      \endverb
+    \endentry
     \entry{HyprlandWiki2026}{online}{}{}
       \name{author}{1}{}{%
         {{hash=1642d0d468f5d4d5c82e3e6f2c1e1334}{%
@@ -35,8 +78,8 @@
       \strng{authornamehash}{1642d0d468f5d4d5c82e3e6f2c1e1334}
       \strng{authorfullhash}{1642d0d468f5d4d5c82e3e6f2c1e1334}
       \strng{authorfullhashraw}{1642d0d468f5d4d5c82e3e6f2c1e1334}
-      \field{sortinit}{2}
-      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{abstract}{The documentation for Hyprland.}
@@ -58,49 +101,6 @@
       \endverb
       \verb{url}
       \verb https://wiki.hypr.land/
-      \endverb
-    \endentry
-    \entry{ArchWiki}{online}{}{}
-      \field{sortinit}{9}
-      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
-      \field{labeltitlesource}{title}
-      \field{title}{{{ArchWiki}}}
-      \field{urlday}{8}
-      \field{urlmonth}{4}
-      \field{urlyear}{2026}
-      \field{urldateera}{ce}
-      \verb{file}
-      \verb /home/maskop/Zotero/storage/FZ7BPLE9/Main_page.html
-      \endverb
-      \verb{urlraw}
-      \verb https://wiki.archlinux.org/title/Main_page
-      \endverb
-      \verb{url}
-      \verb https://wiki.archlinux.org/title/Main_page
-      \endverb
-    \endentry
-    \entry{Quickshell}{online}{}{}
-      \list{organization}{1}{%
-        {quickshell}%
-      }
-      \field{sortinit}{9}
-      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
-      \field{labeltitlesource}{title}
-      \field{abstract}{Quickshell Type Documentation}
-      \field{langid}{english}
-      \field{title}{Quickshell}
-      \field{urlday}{8}
-      \field{urlmonth}{4}
-      \field{urlyear}{2026}
-      \field{urldateera}{ce}
-      \verb{file}
-      \verb /home/maskop/Zotero/storage/CSFW62PW/types.html
-      \endverb
-      \verb{urlraw}
-      \verb https://quickshell.org/docs/v0.2.1/types/
-      \endverb
-      \verb{url}
-      \verb https://quickshell.org/docs/v0.2.1/types/
       \endverb
     \endentry
   \enddatalist
