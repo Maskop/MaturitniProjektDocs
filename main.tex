@@ -35,6 +35,7 @@
 \definecolor{keyword}{RGB}{0,0,180}
 \definecolor{comment}{RGB}{0,128,0}
 \definecolor{string}{RGB}{163,21,21}
+
 \lstset{
     backgroundcolor=\color{codebg},
     frame=single,
@@ -71,11 +72,6 @@
 \setlength{\parindent}{1.25cm}
 \setlength{\parskip}{0pt}
 
-% Czech (stupid) Paragraph Skip %
-\usepackage{indentfirst}
-\setlength{\parindent}{1.25cm}
-\setlength{\parskip}{0pt}
-
 % ---- Začátek dokumentu ----
 \begin{document}
 
@@ -96,6 +92,7 @@
 \end{titlepage}
 
 \pagenumbering{gobble}
+
 % Abstrakt
 \begin{abstract}
 Tato práce se zabývá vývojem dotykově orientovaného uživatelského rozhraní pro Arch Linuxový systém,
@@ -103,9 +100,7 @@ umožňující ovládání počítače pomocí dotykových gest a stylusu. Cíle
 konfigurovatelný systém, který podporuje notifikace, multimediální gesty a dynamické přepínání pracovních
 prostředí s minimálním využitím klávesových zkratek. Postup zahrnoval nejprve konfiguraci dual‑bootu a ruční 
 instalaci systému, následně návrh UI v deklarativním jazyce QML a integraci s správci prostředí
-Hyprland a 
-QuickShell. Výsledkem je funkční 
-prostředí, kde každá aplikace může nastavit vzhled a chování notifikací, a stylus 
+Hyprland a QuickShell. Výsledkem je funkční prostředí, kde každá aplikace může nastavit vzhled a chování notifikací, a stylus 
 modul rozpoznává tlak a směr, což umožňuje kreslení, psaní a gesty jako pinch‑to‑zoom či swipe‑to‑click.
 \end{abstract}
 \newpage
@@ -306,13 +301,18 @@ def hello():
 % Uživatelská dokumentace
 \newpage
 \section{Uživatelská dokumentace}
-Jak se aplikace používá – návody, screenshoty, příklady použití.
+\subsection{Instalace HYPRSURFACE}
+Pro instalaci HYPRSURFACE musíte předem stáhnout a nainstalovat Arch linux bez žádého grafického rozhraní, 
+který je dostupný na \href{https://archlinux.org/download/}{oficiálních stránkách}. \autocite{ArchWiki}
+
 
 % Závěr
 \newpage
 \section{Závěr}
 Shrnutí výsledků, co se podařilo a co by šlo do budoucna vylepšit.
 
+% Zdroje
+\newpage
 \printbibliography
 
 \end{document}

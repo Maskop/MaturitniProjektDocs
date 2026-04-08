@@ -60,6 +60,25 @@
       \verb https://wiki.hypr.land/
       \endverb
     \endentry
+    \entry{ArchWiki}{online}{}{}
+      \field{sortinit}{9}
+      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
+      \field{labeltitlesource}{title}
+      \field{title}{{{ArchWiki}}}
+      \field{urlday}{8}
+      \field{urlmonth}{4}
+      \field{urlyear}{2026}
+      \field{urldateera}{ce}
+      \verb{file}
+      \verb /home/maskop/Zotero/storage/FZ7BPLE9/Main_page.html
+      \endverb
+      \verb{urlraw}
+      \verb https://wiki.archlinux.org/title/Main_page
+      \endverb
+      \verb{url}
+      \verb https://wiki.archlinux.org/title/Main_page
+      \endverb
+    \endentry
   \enddatalist
 \endrefsection
 \endinput
