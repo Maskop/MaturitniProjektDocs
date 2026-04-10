@@ -28,9 +28,6 @@
       \field{urlmonth}{4}
       \field{urlyear}{2026}
       \field{urldateera}{ce}
-      \verb{file}
-      \verb /home/maskop/Zotero/storage/FZ7BPLE9/Main_page.html
-      \endverb
       \verb{urlraw}
       \verb https://wiki.archlinux.org/title/Main_page
       \endverb
@@ -39,7 +36,7 @@
       \endverb
     \endentry
     \entry{Quickshell}{online}{}{}
-      \list{organization}{1}{%
+      \list{publisher}{1}{%
         {quickshell}%
       }
       \field{sortinit}{2}
@@ -52,9 +49,6 @@
       \field{urlmonth}{4}
       \field{urlyear}{2026}
       \field{urldateera}{ce}
-      \verb{file}
-      \verb /home/maskop/Zotero/storage/CSFW62PW/types.html
-      \endverb
       \verb{urlraw}
       \verb https://quickshell.org/docs/v0.2.1/types/
       \endverb
@@ -93,14 +87,30 @@
       \field{year}{2026}
       \field{dateera}{ce}
       \field{urldateera}{ce}
-      \verb{file}
-      \verb /home/maskop/Zotero/storage/N9IYG8PB/wiki.hypr.land.html
-      \endverb
       \verb{urlraw}
       \verb https://wiki.hypr.land/
       \endverb
       \verb{url}
       \verb https://wiki.hypr.land/
+      \endverb
+    \endentry
+    \entry{SnapperUltimateSnapshot}{online}{}{}
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{labeltitlesource}{title}
+      \field{title}{Snapper, {{The}} Ultimate {{Snapshot Tool}} for {{Linux}}}
+      \field{urlday}{9}
+      \field{urlmonth}{4}
+      \field{urlyear}{2026}
+      \field{urldateera}{ce}
+      \verb{file}
+      \verb /home/maskop/Zotero/storage/SA39NJ2G/snapper.io.html
+      \endverb
+      \verb{urlraw}
+      \verb http://snapper.io/
+      \endverb
+      \verb{url}
+      \verb http://snapper.io/
       \endverb
     \endentry
   \enddatalist
