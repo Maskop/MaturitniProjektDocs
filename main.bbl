@@ -28,6 +28,9 @@
       \field{urlmonth}{4}
       \field{urlyear}{2026}
       \field{urldateera}{ce}
+      \verb{file}
+      \verb /home/maskop/Zotero/storage/FZ7BPLE9/Main_page.html
+      \endverb
       \verb{urlraw}
       \verb https://wiki.archlinux.org/title/Main_page
       \endverb
@@ -36,7 +39,7 @@
       \endverb
     \endentry
     \entry{Quickshell}{online}{}{}
-      \list{publisher}{1}{%
+      \list{organization}{1}{%
         {quickshell}%
       }
       \field{sortinit}{2}
@@ -49,6 +52,9 @@
       \field{urlmonth}{4}
       \field{urlyear}{2026}
       \field{urldateera}{ce}
+      \verb{file}
+      \verb /home/maskop/Zotero/storage/CSFW62PW/types.html
+      \endverb
       \verb{urlraw}
       \verb https://quickshell.org/docs/v0.2.1/types/
       \endverb
@@ -58,20 +64,18 @@
     \endentry
     \entry{HyprlandWiki2026}{online}{}{}
       \name{author}{1}{}{%
-        {{hash=1642d0d468f5d4d5c82e3e6f2c1e1334}{%
-           family={Contributors},
-           familyi={C\bibinitperiod},
-           given={Hyprland},
-           giveni={H\bibinitperiod}}}%
+        {{hash=4cce02b5244c879292bb867e1768ef79}{%
+           family={{Vaxry and cotributors}},
+           familyi={V\bibinitperiod}}}%
       }
-      \strng{namehash}{1642d0d468f5d4d5c82e3e6f2c1e1334}
-      \strng{fullhash}{1642d0d468f5d4d5c82e3e6f2c1e1334}
-      \strng{fullhashraw}{1642d0d468f5d4d5c82e3e6f2c1e1334}
-      \strng{bibnamehash}{1642d0d468f5d4d5c82e3e6f2c1e1334}
-      \strng{authorbibnamehash}{1642d0d468f5d4d5c82e3e6f2c1e1334}
-      \strng{authornamehash}{1642d0d468f5d4d5c82e3e6f2c1e1334}
-      \strng{authorfullhash}{1642d0d468f5d4d5c82e3e6f2c1e1334}
-      \strng{authorfullhashraw}{1642d0d468f5d4d5c82e3e6f2c1e1334}
+      \strng{namehash}{4cce02b5244c879292bb867e1768ef79}
+      \strng{fullhash}{4cce02b5244c879292bb867e1768ef79}
+      \strng{fullhashraw}{4cce02b5244c879292bb867e1768ef79}
+      \strng{bibnamehash}{4cce02b5244c879292bb867e1768ef79}
+      \strng{authorbibnamehash}{4cce02b5244c879292bb867e1768ef79}
+      \strng{authornamehash}{4cce02b5244c879292bb867e1768ef79}
+      \strng{authorfullhash}{4cce02b5244c879292bb867e1768ef79}
+      \strng{authorfullhashraw}{4cce02b5244c879292bb867e1768ef79}
       \field{sortinit}{3}
       \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
       \field{labelnamesource}{author}
@@ -87,6 +91,9 @@
       \field{year}{2026}
       \field{dateera}{ce}
       \field{urldateera}{ce}
+      \verb{file}
+      \verb /home/maskop/Zotero/storage/N9IYG8PB/wiki.hypr.land.html
+      \endverb
       \verb{urlraw}
       \verb https://wiki.hypr.land/
       \endverb
@@ -94,26 +101,75 @@
       \verb https://wiki.hypr.land/
       \endverb
     \endentry
-    \entry{SnapperUltimateSnapshot}{online}{}{}
-      \field{sortinit}{6}
-      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+    \entry{AURHome}{online}{}{}
+      \field{sortinit}{8}
+      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
       \field{labeltitlesource}{title}
-      \field{title}{Snapper, {{The}} Ultimate {{Snapshot Tool}} for {{Linux}}}
-      \field{urlday}{9}
+      \field{title}{{{AUR}} (En) - {{Home}}}
+      \field{urlday}{10}
       \field{urlmonth}{4}
       \field{urlyear}{2026}
       \field{urldateera}{ce}
       \verb{file}
-      \verb /home/maskop/Zotero/storage/SA39NJ2G/snapper.io.html
+      \verb /home/maskop/Zotero/storage/GZUVLNJN/aur.archlinux.org.html
       \endverb
       \verb{urlraw}
-      \verb http://snapper.io/
+      \verb https://aur.archlinux.org/
       \endverb
       \verb{url}
-      \verb http://snapper.io/
+      \verb https://aur.archlinux.org/
       \endverb
     \endentry
+    \entry{joJguerYay2026}{software}{}{}
+      \name{author}{1}{}{%
+        {{hash=58509497c78ead678f9e6552cc9d5197}{%
+           family={{Jo and contributors}},
+           familyi={J\bibinitperiod}}}%
+      }
+      \strng{namehash}{58509497c78ead678f9e6552cc9d5197}
+      \strng{fullhash}{58509497c78ead678f9e6552cc9d5197}
+      \strng{fullhashraw}{58509497c78ead678f9e6552cc9d5197}
+      \strng{bibnamehash}{58509497c78ead678f9e6552cc9d5197}
+      \strng{authorbibnamehash}{58509497c78ead678f9e6552cc9d5197}
+      \strng{authornamehash}{58509497c78ead678f9e6552cc9d5197}
+      \strng{authorfullhash}{58509497c78ead678f9e6552cc9d5197}
+      \strng{authorfullhashraw}{58509497c78ead678f9e6552cc9d5197}
+      \field{sortinit}{9}
+      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Yet another Yogurt - An AUR Helper written in Go}
+      \field{day}{10}
+      \field{hour}{9}
+      \field{minute}{41}
+      \field{month}{4}
+      \field{origday}{5}
+      \field{orighour}{2}
+      \field{origminute}{41}
+      \field{origmonth}{9}
+      \field{origsecond}{34}
+      \field{origtimezone}{Z}
+      \field{origyear}{2016}
+      \field{second}{9}
+      \field{timezone}{Z}
+      \field{title}{Jguer/Yay}
+      \field{urlday}{10}
+      \field{urlmonth}{4}
+      \field{urlyear}{2026}
+      \field{year}{2026}
+      \field{dateera}{ce}
+      \field{origdateera}{ce}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://github.com/Jguer/yay
+      \endverb
+      \verb{url}
+      \verb https://github.com/Jguer/yay
+      \endverb
+      \keyw{archlinux,aur,aur-completions,aur-helper,aur-packages,pacaur,pacman,pkgbuild,yaourt,yay}
+    \endentry
   \enddatalist
+  \missing{SnapperUltimateSnapshot}
 \endrefsection
 \endinput
 

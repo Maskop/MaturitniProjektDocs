@@ -92,7 +92,7 @@
     {\large \today} % Uprav datum
 \end{titlepage}
 
-\pagenumbering{gobble}
+\pagenumbering{Roman}
 
 % Abstrakt
 \begin{abstract}
@@ -123,36 +123,6 @@ Výsledkem je uživatelské prostředí, jehož účinnost a vzhled zbytečně n
 
 % Úvod
 \section{Úvod}
-% V posledních letech se stále častěji setkáváme s hybridními zařízeními, která umožňují kombinovat
-% výhody počítače s mobilní aplikací. Jedním z těchto zařízení je Microsoft Surface, které se díky 
-% své všestrannosti stalo nepostradatelným nástrojem pro psaní poznámek, kreslení a programování. 
-% Přestože toto zařízení využívám pravidelně, jsem nucen spoléhat na operační systém Windows, který 
-% na mém hlavním počítači již dlouho neplní žádnou roli. Tento rozdíl v prostředí mi způsobil 
-% nepříjemnost – musím přepínat mezi dvěma oddělenými systémy, což narušuje plynulost mé práce a 
-% snižuje produktivitu. Z toho vyplývá přímý motivací k vytvoření prostředí, kde by všechny mé požadavky 
-% – psaní, programování a vizuální interakce – byly centrálně zajištěny v jediném operačním systému, 
-% přičemž by toto prostředí bylo přizpůsobeno mému osobnímu stylu a preferencím.
-%
-% Cílem této práce je navrhnout a implementovat uživatelské rozhraní na archlinuxu, které bude 
-% podporovat dotykové a stylusové vstupy, umožní snadné přepínání mezi aplikacemi, bude esteticky 
-% přitažlivé a zároveň bude nabízet široké možnosti přizpůsobení. Klíčové funkce, které se mají 
-% realizovat, zahrnují notifikace, dynamické přemisťování a uzavírání aplikací po obrazovce, a to 
-% s cílem minimalizovat potřebu klávesových zkratek a zvýšit intuitivní ovládání. Výsledkem by měl 
-% být systém, který se stane centrem mého každodenního pracovního toku, a to bez nutnosti častého 
-% přepínání mezi Windows a Linuxem.
-%
-% Metodologicky bude práce postupovat ve více fázích. Nejprve provedeme konfiguraci archlinuxu s 
-% ohledem na optimalizaci pro Surface hardware, včetně nastavení driverů a podporujícího softwaru. 
-% Dále se zaměříme na návrh UI v deklarativním jazyce QML, čímž zajistíme snadnou přizpůsobitelnost 
-% vzhledu a chování komponent. Následuje vývoj modulu pro správu notifikací a interaktivních gest, 
-% následovaný testováním a laděním výkonu. Ve finální fázi se zabýváme dokumentací a popisem 
-% architektury projektu, což umožní čtenáři snadné nasazení a údržbu systému.
-%
-% Na začátku této práce je zde uveden přehled architektury – jaké moduly tvoří celkový systém, 
-% jaké nástroje a programovací jazyky byly využity, a krok za krokem průvodce instalací
-% na archlinuxu. Tímto způsobem je zajištěno, že i laik bez předchozího znalostního základu 
-% může přistoupit k instalaci a využití vývojového prostředí, které jsem pro sebe vytvořil.
-
 V posledních letech se můžeme čím dál tím častěji setkávat s konceptem tzv. hybridních zařízení,
 která jsou kombinací mobilních a desktopových platforem a přináší jak výhody, tak nevýhody, obou
 zařízení. Jedním z těchto zařízení je Microsoft Surface, který je mým každodenním společníkem
@@ -180,35 +150,61 @@ aplikací, které by mi mohly ulehčit instalaci. Při samotné instalaci jsem m
 upravený Surface kernel, jenž mi zprovoznil nějaké funkce, které nejsou základně v Linux kernelu.
 Po dokončení instalace jsem ještě potřeboval nastavi grafické rozhraní a Snapper
 \autocite{SnapperUltimateSnapshot}, který mi dovolil verzovat celý systém, abych se mohl při nepovedené 
-konfiguraci vrátit na místo v čase, kdy ještě systém nebyl rozbitý.
+konfiguraci vrátit na místo v čase, kdy systém ještě nebyl rozbitý.
 
-% Avšak protože laptopy této kategorie mají často problém s adaptací UI pro dotykové
-% ovládání, rozhodl jsem se pro vytvoření uživatelského rozhraní pro linux.
+Tato dokumentace shrnuje důvody výběru různých částí systému a jak byly tyto dílky složeny dohromady, aby
+tvořily jednotný systém. Nejdříve pohovořím o Linux straně tohoto projektu, jako je například samotná
+distribuce, compositor a toolkit pro vytváření UI. Poté se přesunu na stránku každodenního programátora a
+vysvětlím jaká je architektura systému a jak se nadále dá systém upravovat a rozšiřovat o další UI prvky.
+Také vysvětlím co za nástroje jsem použil pro vývoj a proč jsem si je vybral. Před úplným koncem této části
+ještě dodám nedostatky, které se mi nepodařilo zprovoznit, a nebo na ně nezbyl čas. Konec bude uzavřen
+dodatkem, jenž se bude zabývat prvky co budou v budoucny přidány aby tvořily můj vysnění systém pro
+hybridní zařízení.
 
 
 % Linux dokumentace
+\newpage
 \section{Linuxářská dokumentace}
 
-\subsection{I use arch BTW}
-Arch Linux je pro tento projekt nepostradatelný základ, a to z několika klíčových, Linux‑orientovaných,
-důvodů. Arch poskytuje čistý, „bare‑bones“ systém, který uživatelé mohou rozšířit a přizpůsobit dle
-svých potřeb – od výběru jádra a modulů až po výběr desktopového prostředí či kompozitního správce.
-V případě Surface se minimalismus Archu stává výhodou, protože každý balíček (xorg‑server, 
-libinput, libinput‑touch, libinput‑stylus, libdrm) je konfigurován a 
-nainstalován přes Pacman, což eliminuje přebytečný bloat a umožňuje přímý zásah do konfigurace 
-pomocí \verb|xorg.conf.d|, \verb|hyprland.conf| nebo \verb|~/.config/qmlrc|.
+\subsection{I use Arch BTW}
+% Arch Linux je pro tento projekt nepostradatelný základ, a to z několika klíčových, Linux‑orientovaných,
+% důvodů. Arch poskytuje čistý, „bare‑bones“ systém, který uživatelé mohou rozšířit a přizpůsobit dle
+% svých potřeb – od výběru jádra a modulů až po výběr desktopového prostředí či kompozitního správce.
+% V případě Surface se minimalismus Archu stává výhodou, protože každý balíček (xorg‑server, 
+% libinput, libinput‑touch, libinput‑stylus, libdrm) je konfigurován a 
+% nainstalován přes Pacman, což eliminuje přebytečný bloat a umožňuje přímý zásah do konfigurace 
+% pomocí \verb|xorg.conf.d|, \verb|hyprland.conf| nebo \verb|~/.config/qmlrc|.
+%
+% Rolling‑release model Archu zajistí, že všechny komponenty – od nejnovějších Xorg‑driverů,
+% přes Hyprland a QuickShell, až po QML runtime – jsou na špičkové verzi. \autocite{HyprlandWiki2026} To je nezbytné pro 
+% podporu nejnovějších přístupových technologií (stylus, multitouch, haptic feedback) a pro 
+% bezproblémové fungování gest a notifikací na Surface. Pacman, s jeho atomickými transakcemi a 
+% jednoduchým rollbackovým systémem, umožňuje rychlé a bezpečné instalace či aktualizace, což se 
+% předehnuje zbytečným závislostem a bezpečnostním rizikům.  
+%
+% Nejoblíbenější zdroj informací – Arch Wiki – je výkonný, detailní manuál, který dokáže vyřešit 
+% téměř jakýkoliv hardwarový nebo softwarový problém. Jeho komunitní podpora, spolu s řadou užitečných 
+% PKGBUILD‑ů a AUR zdrojů, dělá Arch Linux ideální platformou pro vývoj moderního, plně 
+% přizpůsobitelného UI, které vyžaduje vysokou míru kontroly a neustálou aktualizaci.
 
-Rolling‑release model Archu zajistí, že všechny komponenty – od nejnovějších Xorg‑driverů,
-přes Hyprland a QuickShell, až po QML runtime – jsou na špičkové verzi. \autocite{HyprlandWiki2026} To je nezbytné pro 
-podporu nejnovějších přístupových technologií (stylus, multitouch, haptic feedback) a pro 
-bezproblémové fungování gest a notifikací na Surface. Pacman, s jeho atomickými transakcemi a 
-jednoduchým rollbackovým systémem, umožňuje rychlé a bezpečné instalace či aktualizace, což se 
-předehnuje zbytečným závislostem a bezpečnostním rizikům.  
+Archlinux \autocite{ArchWiki} je stavebním kamenem tohoto projektu a důvody pro jeho výběr jsou v celku jasné. Jednou z 
+největších výhod je, že se dá nainstalovat jako velmi \footnote{Systém je bare-bones, když je možnost
+si ho nainstalovat s jen pouze nejnutnějšími částmi systému a můžete si vybrat veškeré systémové moduly,
+aniž by se nástroje pro stejnou věc musely instalovat vícekrát.}{bare-bones} systém, který následné
+rozšíříme jen o nejnutnější aplikace. Výhoda zde spočívá v nízké náročnosti běhu počítače a tudíž i
+delší životoností na baterii.
 
-Nejoblíbenější zdroj informací – Arch Wiki – je výkonný, detailní manuál, který dokáže vyřešit 
-téměř jakýkoliv hardwarový nebo softwarový problém. Jeho komunitní podpora, spolu s řadou užitečných 
-PKGBUILD‑ů a AUR zdrojů, dělá Arch Linux ideální platformou pro vývoj moderního, plně 
-přizpůsobitelného UI, které vyžaduje vysokou míru kontroly a neustálou aktualizaci.
+Další výhodou je rolling-release model Archlinuxu, který přináší ty nejnovější verze driverů a aplikací.
+Což nám umožňuje vždy využívat výhod těch nejnovější balíčků. Zároveň nám přináší pár nevýhod v tvaru
+nečasté nestability, která čas od času může způsobit, že pře používáním počítače musíte něco spravit.
+
+V neposlední řadě je tu ještě AUR \autocite{AURHome}, což je veliká knihovna balíčků, které jsou spravovávány Archlinux
+komunitou. Což nám přináší obrovskou výhodu v získávání aplikací, které jsou normálně náročné na získání
+v jiných Linux distrech a nejsou cetrálně kontrolavný některým z \footnote{Packagemanager je centrální systémová
+aplikace, která nám dovoluje instalovat/upravovat/updatovat/odinstalovávat balíčky (aplikace).}{packagemanagerů}.
+V našem projektu používáme AUR helper yay (Yet Another Yogurt) \autocite{joJguerYay2026}, který spolupracuje s packagemanagerem pacman a 
+zároveň nám dovoluje instalovat aplikace z AUR repozitáře
+
 
 \subsection{Tiling manger VS Floating Manager}
 % Vycházíme z principů efektivity a minimalistického designu, které jsou v linuxovém prostředí klíčové.
@@ -240,90 +236,90 @@ Klíčové vlastnosti zahrnují podporu nejnovějších knihoven a frameworků,
 přehledné a přívětivé grafické rozhraní, nízkou spotřebu systémových zdrojů,
 flexibilní layout pro snadné přizpůsobení UI a automatickou správu závislostí
 a aktualizací. QuickShell kombinuje moderní frameworky s linuxovým prostředím a umožňuje
-rychlý vývoj a testování aplikací.  
+rychlý vývoj a testování aplikací.
 
-\subsection{Architektura aplikace}
-Architektura systému je navržena jako modulární, aby bylo možné jednotlivé části
-nezávisle upravovat, rozšiřovat nebo nahrazovat bez zásahu do celého systému.
-
-Celý systém se skládá z následujících hlavních vrstev:
-
-\begin{itemize}
-    \item \textbf{Prezentační vrstva (UI)} – implementována v jazyce QML. 
-    Zajišťuje vykreslování komponent, animace a interakci s uživatelem pomocí dotyku a stylusu.
-    
-    \item \textbf{Logická vrstva} – obsahuje skripty a komponenty, které zpracovávají vstupy
-    (gesta, kliknutí, tlak stylusu) a rozhodují o chování systému.
-    
-    \item \textbf{Systémová vrstva} – komunikace s Hyprlandem a systémem Linux.
-    Zajišťuje sprá\-vu oken, workspace a notifikací.
-    
-    \item \textbf{Vstupní vrstva} – využívá knihovny jako libinput pro práci s dotykem
-    a stylusem (tlak, směr, multitouch).
-\end{itemize}
-
-Moduly mezi sebou komunikují pomocí signálů a událostí, což umožňuje dynamické reakce
-na uživatelské vstupy bez nutnosti blokujícího zpracování.
+% \subsection{Architektura aplikace}
+% Architektura systému je navržena jako modulární, aby bylo možné jednotlivé části
+% nezávisle upravovat, rozšiřovat nebo nahrazovat bez zásahu do celého systému.
+%
+% Celý systém se skládá z následujících hlavních vrstev:
+%
+% \begin{itemize}
+%     \item \textbf{Prezentační vrstva (UI)} – implementována v jazyce QML. 
+%     Zajišťuje vykreslování komponent, animace a interakci s uživatelem pomocí dotyku a stylusu.
+%
+%     \item \textbf{Logická vrstva} – obsahuje skripty a komponenty, které zpracovávají vstupy
+%     (gesta, kliknutí, tlak stylusu) a rozhodují o chování systému.
+%
+%     \item \textbf{Systémová vrstva} – komunikace s Hyprlandem a systémem Linux.
+%     Zajišťuje sprá\-vu oken, workspace a notifikací.
+%
+%     \item \textbf{Vstupní vrstva} – využívá knihovny jako libinput pro práci s dotykem
+%     a stylusem (tlak, směr, multitouch).
+% \end{itemize}
+%
+% Moduly mezi sebou komunikují pomocí signálů a událostí, což umožňuje dynamické reakce
+% na uživatelské vstupy bez nutnosti blokujícího zpracování.
 
 % Programátorská dokumentace
 \newpage
 \section{Programátorská dokumentace}
 
-\subsection{Proč arch linux?}
-Arch Linux je skvělým základem pro vývoj vlastního uživatelského rozhraní na Surface, protože vám 
-poskytuje čistý a přizpůsobitelný systém, do kterého si můžete doladit jen to, co skutečně 
-potřebujete. Instalace se dělá velmi jednoduše – stačí přidat balíček přes Pacman a systém 
-se o zbytek postará. Díky rolling‑release modelu máte vždy nejnovější verze knihoven a nástrojů 
-(Xorg, Hyprland, QML), což je klíčové, pokud pracujete s dotykem a stylusem, kde každý update 
-může přinést lepší podporu. Arch Wiki je bohatý zdroj, který krok po kroku vysvětluje vše od 
-konfigurace ovladačů po pokročilé nastavení gest. A když se něco pokazí, můžete systém rychle 
-vrátit do předchozího stavu díky nástrojům jako Snapper.
-
-\subsection{Výhody tiling window manager}
-Tiling window manager, jako je Hyprland, přináší několik klíčových
-výhod, které jsou zvláště cenné pro vývojáře a které nevyžadují
-pokročilou znalost Linuxu.
-1. \emph{Efektivní využití zdrojů}.  
-   Na rozdíl od klasických desktopových prostředí, která běží
-   s více procesy (panel, notifikace, tray), tiling manager
-   pracuje jen s ovládáním oken.  To vede k nižší spotřebě
-   CPU a paměti, což je užitečné, pokud pracujete na
-   strojích s omezeným výkonem nebo na mobilních zařízeních.
-2. \emph{Rychlá odezva systému}.  
-   Méně procesů znamená méně multitaskingu a již žádné
-   přerušování zdrojů, takže operace s ovládáním
-   oken jsou okamžité.  To je důležité, když chcete
-   co nejvíce času věnovat ladění a testování kódu.
-3. \emph{Přehledná a intuitivní správa oken}.  
-   Tiling manager automaticky dělí obrazovku na čtvercové
-   oblasti.  Už nikdy nemusíte ručně měnit velikost oken
-   ani hledat „překrytý“ panel – vše se přizpůsobí
-   vaší pracovní oblasti bez nutnosti složité konfigurace.
-4. \emph{Klávesové zkratky a gesta}.  
-   Mnoho tiling managerů podporuje bohatou sadu klávesových
-   zkratek a gest, které usnadňují navigaci mezi aplikacemi
-   a workspace.  To eliminuje potřebu myši a zvyšuje
-   produktivitu.
-5. \emph{Přizpůsobitelnost}.  
-   I když Linux neznáte, můžete rychle upravit
-   konfigurační soubor, aby odpovídal vašim potřebám.
-   Většina nastavení je textová, takže je jednoduché
-   upravit a vidět okamžité změny.
-
-Celkově tiling window manager nabízí
-výkon a sníženou režijní zátěž, která
-přináší vývojářům lepší kontrolu nad prostředím
-a rychlejší práci, aniž by museli zvládat složitá
-desktopová nastavení.
-
-\subsection{K čemu QuickShell?}
-QuickShell je vývojová platforma, která umožňuje rychlý přístup k novým
-frameworkům a využití čistého UI designu.  
-Hlavní výhody zahrnují automatickou integraci nových knihoven – žádná
-manuální instalace závislostí, modulární layout pro jednoduchou úpravu UI,
-atraktivní a čisté uživatelské rozhraní a nízkou režijní zátěž s rychlou
-odezvou systému. QuickShell představuje spojení nejnovějších technologií s uživatelskou
-přívětivostí, čímž usnadňuje vývoj, testování a rychlé přizpůsobení UI.
+% \subsection{Proč arch linux?}
+% Arch Linux je skvělým základem pro vývoj vlastního uživatelského rozhraní na Surface, protože vám 
+% poskytuje čistý a přizpůsobitelný systém, do kterého si můžete doladit jen to, co skutečně 
+% potřebujete. Instalace se dělá velmi jednoduše – stačí přidat balíček přes Pacman a systém 
+% se o zbytek postará. Díky rolling‑release modelu máte vždy nejnovější verze knihoven a nástrojů 
+% (Xorg, Hyprland, QML), což je klíčové, pokud pracujete s dotykem a stylusem, kde každý update 
+% může přinést lepší podporu. Arch Wiki je bohatý zdroj, který krok po kroku vysvětluje vše od 
+% konfigurace ovladačů po pokročilé nastavení gest. A když se něco pokazí, můžete systém rychle 
+% vrátit do předchozího stavu díky nástrojům jako Snapper.
+%
+% \subsection{Výhody tiling window manager}
+% Tiling window manager, jako je Hyprland, přináší několik klíčových
+% výhod, které jsou zvláště cenné pro vývojáře a které nevyžadují
+% pokročilou znalost Linuxu.
+% 1. \emph{Efektivní využití zdrojů}.  
+%    Na rozdíl od klasických desktopových prostředí, která běží
+%    s více procesy (panel, notifikace, tray), tiling manager
+%    pracuje jen s ovládáním oken.  To vede k nižší spotřebě
+%    CPU a paměti, což je užitečné, pokud pracujete na
+%    strojích s omezeným výkonem nebo na mobilních zařízeních.
+% 2. \emph{Rychlá odezva systému}.  
+%    Méně procesů znamená méně multitaskingu a již žádné
+%    přerušování zdrojů, takže operace s ovládáním
+%    oken jsou okamžité.  To je důležité, když chcete
+%    co nejvíce času věnovat ladění a testování kódu.
+% 3. \emph{Přehledná a intuitivní správa oken}.  
+%    Tiling manager automaticky dělí obrazovku na čtvercové
+%    oblasti.  Už nikdy nemusíte ručně měnit velikost oken
+%    ani hledat „překrytý“ panel – vše se přizpůsobí
+%    vaší pracovní oblasti bez nutnosti složité konfigurace.
+% 4. \emph{Klávesové zkratky a gesta}.  
+%    Mnoho tiling managerů podporuje bohatou sadu klávesových
+%    zkratek a gest, které usnadňují navigaci mezi aplikacemi
+%    a workspace.  To eliminuje potřebu myši a zvyšuje
+%    produktivitu.
+% 5. \emph{Přizpůsobitelnost}.  
+%    I když Linux neznáte, můžete rychle upravit
+%    konfigurační soubor, aby odpovídal vašim potřebám.
+%    Většina nastavení je textová, takže je jednoduché
+%    upravit a vidět okamžité změny.
+%
+% Celkově tiling window manager nabízí
+% výkon a sníženou režijní zátěž, která
+% přináší vývojářům lepší kontrolu nad prostředím
+% a rychlejší práci, aniž by museli zvládat složitá
+% desktopová nastavení.
+%
+% \subsection{K čemu QuickShell?}
+% QuickShell je vývojová platforma, která umožňuje rychlý přístup k novým
+% frameworkům a využití čistého UI designu.  
+% Hlavní výhody zahrnují automatickou integraci nových knihoven – žádná
+% manuální instalace závislostí, modulární layout pro jednoduchou úpravu UI,
+% atraktivní a čisté uživatelské rozhraní a nízkou režijní zátěž s rychlou
+% odezvou systému. QuickShell představuje spojení nejnovějších technologií s uživatelskou
+% přívětivostí, čímž usnadňuje vývoj, testování a rychlé přizpůsobení UI.
 
 \subsection{Architektura systému}
 Popis hlavních částí aplikace, diagramy, vztahy mezi moduly.

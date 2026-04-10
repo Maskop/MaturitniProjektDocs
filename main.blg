@@ -1,14 +1,16 @@
 [0] Config.pm:328> INFO - This is Biber 2.21
 [0] Config.pm:331> INFO - Logfile is 'main.blg'
-[39] biber:342> INFO - === Thu Apr  9, 2026, 12:10:51
-[47] Biber.pm:421> INFO - Reading 'main.bcf'
-[84] Biber.pm:1002> INFO - Found 4 citekeys in bib section 0
-[91] Biber.pm:4487> INFO - Processing section 0
-[96] Biber.pm:4678> INFO - Looking for bibtex file 'HYPRSURFACE.bib' for section 0
-[96] bibtex.pm:1713> INFO - LaTeX decoding ...
-[100] bibtex.pm:1519> INFO - Found BibTeX data source 'HYPRSURFACE.bib'
-[120] UCollate.pm:68> INFO - Overriding locale 'cs-CZ' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[120] UCollate.pm:68> INFO - Overriding locale 'cs-CZ' defaults 'variable = shifted' with 'variable = non-ignorable'
-[120] Biber.pm:4307> INFO - Sorting list 'none/global//global/global/global' of type 'entry' with template 'none' and locale 'cs-CZ'
-[124] bbl.pm:676> INFO - Writing 'main.bbl' with encoding 'UTF-8'
-[125] bbl.pm:779> INFO - Output to main.bbl
+[57] biber:342> INFO - === Fri Apr 10, 2026, 13:13:24
+[67] Biber.pm:421> INFO - Reading 'main.bcf'
+[114] Biber.pm:1002> INFO - Found 6 citekeys in bib section 0
+[123] Biber.pm:4487> INFO - Processing section 0
+[130] Biber.pm:4678> INFO - Looking for bibtex file 'HYPRSURFACE.bib' for section 0
+[130] bibtex.pm:1713> INFO - LaTeX decoding ...
+[136] bibtex.pm:1519> INFO - Found BibTeX data source 'HYPRSURFACE.bib'
+[161] UCollate.pm:68> INFO - Overriding locale 'cs-CZ' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[161] UCollate.pm:68> INFO - Overriding locale 'cs-CZ' defaults 'variable = shifted' with 'variable = non-ignorable'
+[161] Biber.pm:4307> INFO - Sorting list 'none/global//global/global/global' of type 'entry' with template 'none' and locale 'cs-CZ'
+[165] bbl.pm:676> INFO - Writing 'main.bbl' with encoding 'UTF-8'
+[166] bbl.pm:779> INFO - Output to main.bbl
+[166] Biber.pm:132> WARN - I didn't find a database entry for 'SnapperUltimateSnapshot' (section 0)
+[166] Biber.pm:134> INFO - WARNINGS: 1
