@@ -2405,7 +2405,8 @@
     <bcf:citekey order="9" intorder="1">joJguerYay2026</bcf:citekey>
     <bcf:citekey order="10" intorder="1">ArchWiki</bcf:citekey>
     <bcf:citekey order="11" intorder="1">WhatTilingWindow</bcf:citekey>
-    <bcf:citekey order="12" intorder="1">ArchWiki</bcf:citekey>
+    <bcf:citekey order="12" intorder="1">HyprlandWiki2026</bcf:citekey>
+    <bcf:citekey order="13" intorder="1">ArchWiki</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="none">
