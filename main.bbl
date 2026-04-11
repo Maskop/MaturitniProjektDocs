@@ -101,6 +101,25 @@
       \verb https://wiki.hypr.land/
       \endverb
     \endentry
+    \entry{SnapperUltimateSnapshot}{online}{}{}
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{labeltitlesource}{title}
+      \field{title}{Snapper, {{The}} Ultimate {{Snapshot Tool}} for {{Linux}}}
+      \field{urlday}{11}
+      \field{urlmonth}{4}
+      \field{urlyear}{2026}
+      \field{urldateera}{ce}
+      \verb{file}
+      \verb /home/maskop/Zotero/storage/U57RPYEV/snapper.io.html
+      \endverb
+      \verb{urlraw}
+      \verb http://snapper.io/
+      \endverb
+      \verb{url}
+      \verb http://snapper.io/
+      \endverb
+    \endentry
     \entry{AURHome}{online}{}{}
       \field{sortinit}{8}
       \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
@@ -120,7 +139,7 @@
       \verb https://aur.archlinux.org/
       \endverb
     \endentry
-    \entry{joJguerYay2026}{software}{}{}
+    \entry{joJguerYay2026}{online}{}{}
       \name{author}{1}{}{%
         {{hash=58509497c78ead678f9e6552cc9d5197}{%
            family={{Jo and contributors}},
@@ -168,8 +187,26 @@
       \endverb
       \keyw{archlinux,aur,aur-completions,aur-helper,aur-packages,pacaur,pacman,pkgbuild,yaourt,yay}
     \endentry
+    \entry{WhatTilingWindow}{online}{}{}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labeltitlesource}{title}
+      \field{title}{What Is a Tiling Window Manager : R/Linux4noobs}
+      \field{urlday}{11}
+      \field{urlmonth}{4}
+      \field{urlyear}{2026}
+      \field{urldateera}{ce}
+      \verb{file}
+      \verb /home/maskop/Zotero/storage/D75XAUEA/what_is_a_tiling_window_manager.html
+      \endverb
+      \verb{urlraw}
+      \verb https://www.reddit.com/r/linux4noobs/comments/1adarb3/what_is_a_tiling_window_manager/
+      \endverb
+      \verb{url}
+      \verb https://www.reddit.com/r/linux4noobs/comments/1adarb3/what_is_a_tiling_window_manager/
+      \endverb
+    \endentry
   \enddatalist
-  \missing{SnapperUltimateSnapshot}
 \endrefsection
 \endinput
 

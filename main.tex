@@ -192,42 +192,47 @@ největších výhod je, že se dá nainstalovat jako velmi \footnote{Systém je
 si ho nainstalovat s jen pouze nejnutnějšími částmi systému a můžete si vybrat veškeré systémové moduly,
 aniž by se nástroje pro stejnou věc musely instalovat vícekrát.}{bare-bones} systém, který následné
 rozšíříme jen o nejnutnější aplikace. Výhoda zde spočívá v nízké náročnosti běhu počítače a tudíž i
-delší životoností na baterii.
+delší životonosti na baterii.
 
-Další výhodou je rolling-release model Archlinuxu, který přináší ty nejnovější verze driverů a aplikací.
+Další výhodou je rolling-release model Archlinuxu, který nám přináší ty nejnovější verze driverů a aplikací
+hned jak jsou vydány.
 Což nám umožňuje vždy využívat výhod těch nejnovější balíčků. Zároveň nám přináší pár nevýhod v tvaru
-nečasté nestability, která čas od času může způsobit, že pře používáním počítače musíte něco spravit.
+nečasté nestability, která čas od času může způsobit, že před používáním počítače musíme něco spravit.
 
 V neposlední řadě je tu ještě AUR \autocite{AURHome}, což je veliká knihovna balíčků, které jsou spravovávány Archlinux
-komunitou. Což nám přináší obrovskou výhodu v získávání aplikací, které jsou normálně náročné na získání
+komunitou. Což nám přináší obrovskou výhodu v získávání aplikací, které jsou normálně náročnější na instalaci
 v jiných Linux distrech a nejsou cetrálně kontrolavný některým z \footnote{Packagemanager je centrální systémová
-aplikace, která nám dovoluje instalovat/upravovat/updatovat/odinstalovávat balíčky (aplikace).}{packagemanagerů}.
-V našem projektu používáme AUR helper yay (Yet Another Yogurt) \autocite{joJguerYay2026}, který spolupracuje s packagemanagerem pacman a 
-zároveň nám dovoluje instalovat aplikace z AUR repozitáře
+aplikace, která nám dovoluje instalovat / upravovat / updatovat / odinstalovávat balíčky (aplikace).}{packagemanagerů}.
+V našem projektu používáme AUR helper yay (Yet Another Yogurt) \autocite{joJguerYay2026}, který spolupracuje s
+packagemanagerem pacman a zároveň nám dovoluje instalovat aplikace z AUR repozitáře, jenž je využit na instalace
+některých z našich hlavních částí systému.
+
+A jako třešnička na dortu je tu Archwiki \autocite{ArchWiki}, což je jedna z největších wiki stránek pro Linux Obecně.
+Dozvíte se zde jak vše nastavit, co za aplikace si vybrat a také jak je následně nainstalovat nainstalovat. Dále
+obsahuje spoustu hardwarově specifických rad, přehledů a informací o funkčnosti různých driverů a různých částí,
+např. Webkamera, Digitální pero, GPU a Wi-Fi. \href{https://wiki.archlinux.org/title/Microsoft_Surface_Pro_9}{Zde můžete,
+ku příkladu, najít co funguje na Microsoft Surface Pro 9.}
 
 
-\subsection{Tiling manger VS Floating Manager}
-% Vycházíme z principů efektivity a minimalistického designu, které jsou v linuxovém prostředí klíčové.
-% Tiling window manager, konkrétně Hyprland, byl zvolen právě pro svou schopnost maximalizovat využití 
-% dostupných hardwarových prostředků. Na rozdíl od typických desktopových prostředí, kde je spousta 
-% součástí – panel, notifikace, systémové tray apod. – tiling manager implementuje základní funkce 
-% přímo v jádře správce oken, což přináší výrazné snížení spotřeby CPU i paměti. Navíc je díky tomu 
-% zajištěna rychlejší odezva systému, protože méně procesů znamená méně multitaskingu a méně přerušení 
-% zdrojů. Pro vývoj aplikací a UI, kde je klíčové mít co nejvíce času na ladění a testování, je takové 
-% prostředí ideální: snižuje se režijní zátěž a zvyšuje se přehlednost a kontrola nad okny a workspaces. 
-% Tiling manager proto představuje optimalizovaný kompromis mezi výkonem a funkcionalitou, který 
-% naplňuje požadavky moderního vývoje na architekturu a rozložení obrazovky.
-%
-% Volba tiling window manageru je zvláště vhodná pro zařízení typu tablet, protože maximálně využívá 
-% omezený displej a zároveň redukuje režijní zátěž. Na úzkém plátně je klíčové mít přehledné a rychlé 
-% přechody mezi aplikacemi, které tiling manager umožňuje automatickým rozdělením dostupné oblasti do 
-% dokonalých retezů – uživatel nemusí ručně měnit velikosti oken ani se obávat „překrytých“ panelů. Dále 
-% podporuje bohatou škálu klávesových zkratek a gest, které na tabletu zjednodušují navigaci a dávají 
-% uživateli kontrolu bez nutnosti používání myši či dotykové ovládací lišty. Tím se eliminuje 
-% zbytečná spotřeba paměti a procesů spojená s tradičními desktopovými prostředími, což je pro tablet 
-% kritické, kde je energie a výkon často omezené. Navíc přímá integrace gest (např. přetahování oken 
-% nebo změna workspace) podporuje intuitivní interakci s aplikacemi, což zvyšuje ergonomii a celkovou 
-% efektivitu používání tabletu.
+\subsection{Jak jen budeme ovládat naše okna? No jó, Hyprland}
+
+\subsubsection{Co je to window manager a jeho typy}
+Window manager je software, který, jak již název napovídá, spravuje okna, což pro nás znamená, že určuje kdy a kde se okno objeví, jaké atributy 
+má a jakou velikost má. Nadále zpracovává veškeré zvětšování / zmenšování, automatické snappování a tilování a další
+věci které s okny normálně můžeme dělat. Window managery se dále dělí na stacking (floating), tiling a dynamické.
+\autocite{WhatTilingWindow}
+Stacking je styl který se dá nazvat jako ten "tipický", protože je viditéný např. v Microsoft Windows, macOS a 
+také ze základu ve většině velkých Linux distrech, jako je třeba Linux Mint, Ubuntu, Fedora, atd. Tiling manager, na druhou
+stranu, není až tak častý a je používán spíše \footnote{Power‑user je uživatel, který vyniká ve využívání pokročilých
+funkcí softwaru či operačního systému, těmito často jsou např. skripty a klávesové zkratky. Také bývá často obeznámen
+s interní funkcí softwaru co používá.}{power-userama} pro jeho možnost si nastavit zkratky pro pohybování okny a obecně
+rychlejším přesunem mezi okny. Nakonec tu je dynamický window manger, který kombinuje oba předchozí a dovoluje nám zároveň
+se držet v tilech a nebo se od nich uvolnit a mít jedno či více oken floating.
+
+\subsubsection{Ten náš Hyprland}
+Hyprland je dynamický widnow manager, který jsem vybral pro jeho velikou modularitu, dobrou dokumentaci, posazení na
+wayland protokolu a také protože s ním již osobně mám zkušenosti.
+
 
 \subsection{Co na UI? QuickShell!}
 QuickShell slouží jako vývojový rámec, který poskytuje přímý přístup k
