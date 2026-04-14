@@ -4,7 +4,7 @@
 \usepackage[czech]{babel}
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
-\usepackage[left=1in,right=1in,top=1in,bottom=1in]{geometry}
+\usepackage[left=0.5in,right=0.5in,top=1in,bottom=1in]{geometry}
 \usepackage{hyperref} % klikací odkazy v PDF
 \usepackage{graphicx} % vkládání obrázků
 \usepackage{listings} % zvýrazňování kódu
@@ -13,7 +13,8 @@
 \usepackage{titlesec} % balíček na formátování nadpisů
 \usepackage{fancyhdr}
 \usepackage{csquotes}
-
+\usepackage{forest}
+\usepackage[nopar]{kantlipsum}
 
 % Bibliography %
 \usepackage[
@@ -72,6 +73,22 @@
 \usepackage{indentfirst}
 \setlength{\parindent}{1.25cm}
 \setlength{\parskip}{0pt}
+
+\setcounter{secnumdepth}{4}
+\usepackage{titlesec}
+\titleformat{\paragraph}
+  {\normalfont\normalsize\bfseries} % style
+  {\theparagraph}{1em}             % numbering
+  {}                                % before text
+\titlespacing*{\paragraph}{0pt}{3.25ex plus 1ex minus .2ex}{1em}
+
+\newcommand*\justify{%
+  \fontdimen2\font=0.4em% interword space
+  \fontdimen3\font=0.2em% interword stretch
+  \fontdimen4\font=0.1em% interword shrink
+  \fontdimen7\font=0.1em% extra space
+  \hyphenchar\font=`\-% allowing hyphenation
+}
 
 % ---- Začátek dokumentu ----
 \begin{document}
@@ -219,68 +236,305 @@ je aktuálně rozbitý, kvůli změně stylu psaní některých konfigurací pro
 % a aktualizací. QuickShell kombinuje moderní frameworky s linuxovým prostředím a umožňuje
 % rychlý vývoj a testování aplikací.
 
+Pro UI jsem se rozhodl jít s novým systémem, který se objevil nedávno a rychle se rozšířil mezi uživatele linuxu,
+kteří si rádi upravují vzhled linuxu podle jejich představ. Tímto systémem je právě QuickShell \autocite{Quickshell}.
+Jeho hlavní výhodou i nevýhodou je jeho upravitelnost. Proč ale říkám i nevýhodou? Protože pokud si chcete přidat do
+své konfigurace něco co někdo má ve své konfiguraci, obvykle to znamená, že to musíte přeprogramovat, protože každý
+má svůj vlastní styl jak získávat různé informace ze systému. Další nevýhodou je jeho stav vývoje, jelikož systém je
+stále ještě v aplha stádiu, znamená to pro nás, že se často mění jak věci fungují a pak se musí přepisovat na nový
+styl zpracování. Naopak jeho výhodou je využití delkarativního jazyka QML \autocite{QtDocumentation}, který
+si dovoluje uživatelské rozhraní upravit do všech detailů, jako je třeba i samotná efektivita systému. Další výhoda
+spočívá v flexibilitě oproti ostatním systémům, jako jsou například Waybar \autocite{rouillardAlexaysWaybar2026}, 
+který umí dělat jen lišty, nebo Wofi \autocite{ScooptaWofiThis},
+jenž zas umí jen zobrazovat list věcí s možností výběru, jejichž vzhled je prakticky jedniné co jde pořádně upravovat
+a navíc se dají dělat jen v CSS.
+
 % Programátorská dokumentace
 \newpage
 \section{Programátorská dokumentace}
 
-% \subsection{Proč arch linux?}
-% Arch Linux je skvělým základem pro vývoj vlastního uživatelského rozhraní na Surface, protože vám 
-% poskytuje čistý a přizpůsobitelný systém, do kterého si můžete doladit jen to, co skutečně 
-% potřebujete. Instalace se dělá velmi jednoduše – stačí přidat balíček přes Pacman a systém 
-% se o zbytek postará. Díky rolling‑release modelu máte vždy nejnovější verze knihoven a nástrojů 
-% (Xorg, Hyprland, QML), což je klíčové, pokud pracujete s dotykem a stylusem, kde každý update 
-% může přinést lepší podporu. Arch Wiki je bohatý zdroj, který krok po kroku vysvětluje vše od 
-% konfigurace ovladačů po pokročilé nastavení gest. A když se něco pokazí, můžete systém rychle 
-% vrátit do předchozího stavu díky nástrojům jako Snapper.
-%
-% \subsection{Výhody tiling window manager}
-% Tiling window manager, jako je Hyprland, přináší několik klíčových
-% výhod, které jsou zvláště cenné pro vývojáře a které nevyžadují
-% pokročilou znalost Linuxu.
-% 1. \emph{Efektivní využití zdrojů}.  
-%    Na rozdíl od klasických desktopových prostředí, která běží
-%    s více procesy (panel, notifikace, tray), tiling manager
-%    pracuje jen s ovládáním oken.  To vede k nižší spotřebě
-%    CPU a paměti, což je užitečné, pokud pracujete na
-%    strojích s omezeným výkonem nebo na mobilních zařízeních.
-% 2. \emph{Rychlá odezva systému}.  
-%    Méně procesů znamená méně multitaskingu a již žádné
-%    přerušování zdrojů, takže operace s ovládáním
-%    oken jsou okamžité.  To je důležité, když chcete
-%    co nejvíce času věnovat ladění a testování kódu.
-% 3. \emph{Přehledná a intuitivní správa oken}.  
-%    Tiling manager automaticky dělí obrazovku na čtvercové
-%    oblasti.  Už nikdy nemusíte ručně měnit velikost oken
-%    ani hledat „překrytý“ panel – vše se přizpůsobí
-%    vaší pracovní oblasti bez nutnosti složité konfigurace.
-% 4. \emph{Klávesové zkratky a gesta}.  
-%    Mnoho tiling managerů podporuje bohatou sadu klávesových
-%    zkratek a gest, které usnadňují navigaci mezi aplikacemi
-%    a workspace.  To eliminuje potřebu myši a zvyšuje
-%    produktivitu.
-% 5. \emph{Přizpůsobitelnost}.  
-%    I když Linux neznáte, můžete rychle upravit
-%    konfigurační soubor, aby odpovídal vašim potřebám.
-%    Většina nastavení je textová, takže je jednoduché
-%    upravit a vidět okamžité změny.
-%
-% Celkově tiling window manager nabízí
-% výkon a sníženou režijní zátěž, která
-% přináší vývojářům lepší kontrolu nad prostředím
-% a rychlejší práci, aniž by museli zvládat složitá
-% desktopová nastavení.
-%
-% \subsection{K čemu QuickShell?}
-% QuickShell je vývojová platforma, která umožňuje rychlý přístup k novým
-% frameworkům a využití čistého UI designu.  
-% Hlavní výhody zahrnují automatickou integraci nových knihoven – žádná
-% manuální instalace závislostí, modulární layout pro jednoduchou úpravu UI,
-% atraktivní a čisté uživatelské rozhraní a nízkou režijní zátěž s rychlou
-% odezvou systému. QuickShell představuje spojení nejnovějších technologií s uživatelskou
-% přívětivostí, čímž usnadňuje vývoj, testování a rychlé přizpůsobení UI.
-
 \subsection{Architektura systému}
-Popis hlavních částí aplikace, diagramy, vztahy mezi moduly.
+\begin{tiny} \begin{center}
+    (V této části bude hlavně popis uživatelského rozhraní, protože projekt se zabýval zejména jeho vývojem.) 
+\end{center} \end{tiny}
+
+Systém se skládá ze dvou hlavních prvků, těmi jsou Hyprland a QuickShell. Ze začátku vysvětlím, jaké je rozložení
+souborů pro Hyprland a pak jaké je rozložení souborů pro QuickShell. U většiny souborů bude vysvětlení, jak je dále
+upravovat a co do nich patří.
+
+\subsubsection{Hyprland}
+Soubory pro konfiguraci Hyprlandu jsou k nalezení ve složce \verb|~/.config/hypr/|. Zde se nalézají veškeré konfigurační
+soubory pro Hypr Ecosystém a dovolují nám upravovat, jak se nám chová systém, z uživatelské strany. 
+
+\begin{center} \fbox{ \begin{forest}
+  for tree={
+    font=\ttfamily,
+    grow'=0,
+    child anchor=west,
+    parent anchor=south,
+    anchor=west,
+    calign=first,
+    edge path={
+      \noexpand\path [draw, \forestoption{edge}]
+      (!u.south west) +(7.5pt,0) |- node[fill,inner sep=1.25pt] {} (.child anchor)\forestoption{edge label};
+    },
+    before typesetting nodes={
+      if n=1
+        {insert before={[,phantom]}}
+        {}
+    },
+    fit=band,
+    before computing xy={l=15pt},
+  }
+  [\textasciitilde/.config/hypr/
+  [hyprland/
+    [animations.conf (\ref{animations.conf})]
+    [autostart.conf (\ref{autostart.conf})]
+    [decorations.conf (\ref{decorations.conf})]
+    [input.conf (\ref{input.conf})]
+    [keybinds.conf (\ref{keybinds.conf})]
+    [look.conf (\ref{look.conf})]
+    [plugins.conf (\ref{plugins.conf})]
+    [windows-workspaces.conf (\ref{windows-workspaces.conf})]
+  ]
+  [hyprland.conf (\ref{hyprland.conf})]
+  [hypridle.conf (\ref{hypridle.conf})]
+  [hyprlock.conf (\ref{hyprlock.conf})]
+]
+\end{forest}} \end{center}
+
+\paragraph{hyprland.conf}
+\label{hyprland.conf}
+Zde nastavujeme globální proměnné a načítáme další konfigurační soubory, které definují hlavní programy a prostředí.
+
+\begin{itemize}
+  \item \textbf{Environmentální proměnné} \texttt{\justify env} určují například výchozí terminál, prohlížeč souborů nebo
+      klávesovou zkratku \texttt{\justify \textdollar mainMod}.
+    \begin{itemize}
+      \item Pokud chcete změnit výchozí terminál, musíte upravte řádek na \texttt{\justify \textdollar terminal = alacritty (nebo jiný)}.
+      \item Přidejte další proměnné, např. \texttt{\justify export GPG\_TTY=\textdollar (tty)}.
+    \end{itemize}
+      \item \textbf{Source sekce}: importuje další soubory (look.conf, animations.conf, decorations.conf).
+    \begin{itemize}
+      \item Pokud chcete přidat nový soubor, přidejte:\\ \texttt{\justify source = \textasciitilde/.config/hypr/hyprland/novy\_conf.conf}.
+    \end{itemize}
+  \item \textbf{Programs} – proměnné jako \texttt{\justify \textdollar terminal}, \texttt{\justify \textdollar fileManager} a podobně,
+      které se používají ve zkratkách.
+    \begin{itemize}
+      \item Např. \texttt{\justify bind = \textdollar mainMod, return, exec, \textdollar terminal} – pokud chcete jiný terminál, 
+          změňte hodnotu \texttt{\justify \textdollar terminal} v souboru.
+    \end{itemize}
+\end{itemize}
+
+\paragraph{animations.conf}
+\label{animations.conf}
+Zde definujeme animace, které Hyprland používá při přepínání pracovních ploch, okén a podobně.
+
+\begin{itemize}
+  \item \textbf{animation v-2}: např. \texttt{\justify animation v2, from = 0, to = 1, type = back} – říká, jak se okno pohybuje.
+  \item \textbf{animation v-1}: specifikuje rychlost a křivku (ease-in-out).
+    \begin{itemize}
+      \item Pokud chcete, aby se okna rozvíjela rychleji, změňte \texttt{\justify duration = 0.15} na \texttt{\justify duration = 0.1}.
+      \item Pro změnu typu křivky, nahraďte \texttt{\justify ease-in-out} například \texttt{\justify linear} nebo \texttt{\justify ease-in}.
+    \end{itemize}
+  \item \textbf{Poznámka}: Pro změnu animací znovu načtěte Hyprland \texttt{\justify \textdollar mainMod, R}.
+\end{itemize}
+
+\paragraph{autostart.conf}
+\label{autostart.conf}
+Zde specifikujeme programy, které se spustí po přihlášení do Hyprlandu.
+
+\begin{itemize}
+  \item \textbf{exec‑once}: program spustí jen jednou (např. \texttt{\justify sh \textasciitilde/.scripts/wofi-wallpaper-selector.sh}).
+  \item \textbf{exec}: program spustí při každém startu.
+    \begin{itemize}
+      \item Přidejte nový řádek \texttt{\justify exec-once, waybar} pro spouštění Waybar.
+      \item Odeberte řádek \texttt{\justify exec, wayscriber} pokud nechcete spouštět Wayscriber.
+      \item Přidejte skripty v lokální složce \texttt{\justify \textasciitilde/.scripts/}.
+    \end{itemize}
+\end{itemize}
+
+\paragraph{decorations.conf}
+\label{decorations.conf}
+Zde nastavujeme vzhled oken – zaoblení, rozmazání, průhlednost, stíny.
+
+\begin{itemize}
+  \item \texttt{\justify rounded = 10} – výška zaoblení hran.
+  \item \texttt{\justify blur = 6} – úroveň rozmazání.
+  \item \texttt{\justify opacity = 0.8} – průhlednost okna.
+  \item \texttt{\justify shadow = true} – povolení stínu.
+    \begin{itemize}
+      \item Pokud chcete méně zaoblení, snižte \texttt{\justify rounded} na 5.
+      \item Pro větší rozmazání změňte \texttt{\justify blur} na 8.
+      \item Pro úplné vypnutí stínu nastavte \texttt{\justify shadow = false}.
+    \end{itemize}
+\end{itemize}
+
+\paragraph{input.conf}
+\label{input.conf}
+Zde konfigurujeme nastavení klávesnice a gest.
+
+\begin{itemize}
+  \item \texttt{\justify kb\_layout = us, cz} – podpora klávesnice US a CZ.
+  \item \texttt{\justify sensitivity = 0} – citlivost gest (0 – výchozí).
+  \item \texttt{\justify follow\_mouse = 1} – okna sledují kurzor.
+    \begin{itemize}
+      \item Pro změnu rozložení na francouzskou klávesnici přidejte \texttt{\justify kb\_layout = fr}.
+      \item Pokud chcete aktivovat NumLock výchozí, změňte \texttt{\justify numlock\_by\_default = true}.
+      \item Zvětšení citlivosti gest změňte \texttt{\justify sensitivity = 1}.
+    \end{itemize}
+\end{itemize}
+
+\paragraph{keybinds.conf}
+\label{keybinds.conf}
+Zde definujeme klávesové zkratky pro ovládání okna a systému.
+
+\begin{itemize}
+  \item \texttt{\justify \$mainMod = SUPER} – hlavní modifikátor (klávesa Windows).
+  \item \texttt{\justify bind = \$(mainMod), return, exec, \$(terminal)} – otevření terminálu.
+  \item \texttt{\justify bind = \$(mainMod), L, exec, hyprlock \&} – zamknutí.
+    \begin{itemize}
+      \item Pro změnu hlavního modifikátoru na Alt, změňte \texttt{\justify \$mainMod = ALT}.
+      \item Přidejte novou zkratku: \texttt{\justify bind = \$(mainMod), T, exec, kitty}.
+      \item Upravte existující zkratku změnou sekvence kláves, např. \texttt{\justify bind = \textdollar(mainMod) SHIFT, Q, killactive,}.
+    \end{itemize}
+\end{itemize}
+
+\paragraph{look.conf}
+\label{look.conf}
+Zde nastavujeme vzhled okna – mezery, hrany, barvy.
+
+\begin{itemize}
+  \item \texttt{\justify gaps\_in = 5}, \texttt{\justify gaps\_out = 20} – vnitřní a vnější mezery.
+  \item \texttt{\justify border\_size = 2} – šířka rámečku.
+  \item \texttt{\justify col.active\_border} a \texttt{\justify col.inactive\_border} – barvy hran.
+    \begin{itemize}
+      \item Pro větší mezery změňte \texttt{\justify gaps\_in = 10}.
+      \item Pokud chcete odbarvit neaktivní okno, upravte \texttt{\justify col.inactive\_border = \#404040}.
+      \item Pro změnu barvy aktivních okien nahraďte hex‑kód \texttt{\justify \#ff0000}.
+    \end{itemize}
+\end{itemize}
+
+\paragraph{plugins.conf}
+\label{plugins.conf}
+Zde nastavujeme různé rozšíření, které nám mohou ulehčit práci.
+
+\begin{itemize}
+  \item \texttt{\justify hyprbars ... \{enabled = true ... \}} určuje jestli je plugin hyprbars zapnutý.
+  \item \texttt{\justify hyprbars ... \{hyprbars-button = rgb(ff4040), 15, , hyprctl dispatch killactive ... \}} nestavuje
+    jaká tlačítka jsou dostupná a co mají za funkce.
+  \begin{itemize}
+    \item Pro změnu baru na neprůhledný, přepište \texttt{\justify bar\_color = rgba(000000CC)} na jakoukoliv jinou neprůhlednou barvu.
+
+  \end{itemize}
+\end{itemize}
+
+\paragraph{windows-workspaces.conf}
+\label{windows-workspaces.conf}
+Zde nastavujeme které monitory a workspace k sobě patří.
+
+\begin{itemize}
+  \item \texttt{\justify workspace = 1, monitor:eDP-1} – přiřadí workspace 1 k monitoru eDP‑1.
+  \begin{itemize}
+    \item Pro změnu přiřazeného monitoru: \texttt{\justify workspace = 1, monitor:HDMI-1}
+  \end{itemize}
+\end{itemize}
+
+(Pokud chcete zjistit jak se monitor jmenuje pro váš systém, můžete spustit command \texttt{\justify hyprctl monitors}
+a Hyprland vám vrátí veškeré připojené monitory)
+
+\paragraph{hypridle.conf}
+\label{hypridle.conf}
+Zde nastavujeme chování \emph{Hypridle} – daemonu, který řídí automatické zamykání a šetření energie.
+
+\begin{itemize}
+  \item \textbf{General sekce}: připojuje externí skripty při zamknutí\\ (\verb|lock|), úpravu jasu a přerušování \verb|numlock|.
+    \begin{itemize}
+      \item Přidejte nebo upravte řádek \verb|lock = loginctl lock-session|v sekci
+        \textit{general} – změna příkazu po zamknutí.
+      \item Upravte časové limity (timeout) v listenerech, např. \verb|timeout 300|, nebo přidejte 
+          nový listener s jiným příkazem.
+    \end{itemize}
+  \item \textbf{Listener sekce}: řídí akce po překročení zadaného času – např. snižování jasu, zamykání obrazovky nebo vypnutí.
+    \begin{itemize}
+      \item Časové limity (\verb|timeout 300|) změňte na požadovanou dobu v sekundách.
+      \item Změňte příkaz \verb|exec, notify-send …| podle potřeby.
+    \end{itemize}
+  \item \textbf{Poznámka}: Po úpravě souboru znovu načtěte Hypridle příkazem \verb|hyprctl reload| nebo restartujte systém.
+\end{itemize}
+
+\paragraph{hyprlock.conf}
+\label{hyprlock.conf}
+
+Zde nastavujeme vzhled a chování \emph{Hyprlock} – zamykací obrazovky.
+
+\begin{itemize}
+  \item V souboru jsou momentálně testovací obrázky, ale lze zde definovat např. \texttt{\justify locktime}, \texttt{\justify font}, \texttt{\justify blur}, \texttt{\justify image}.
+    \begin{itemize}
+      \item Přidejte řádek \texttt{\justify blur = true} nebo \texttt{\justify font = NotoSans, 18} a upravte dle potřeby.
+    \end{itemize}
+  \item Po úpravě souboru restartujte Hyprlock nebo znovu načtěte konfiguraci.
+\end{itemize}
+
+
+
+\subsubsection{QuickShell}
+
+% \begin{center} \fbox{ \begin{forest}
+%   for tree={
+%     font=\ttfamily,
+%     grow'=0,
+%     child anchor=west,
+%     parent anchor=south,
+%     anchor=west,
+%     calign=first,
+%     edge path={
+%       \noexpand\path [draw, \forestoption{edge}]
+%       (!u.south west) +(7.5pt,0) |- node[fill,inner sep=1.25pt] {} (.child anchor)\forestoption{edge label};
+%     },
+%     before typesetting nodes={
+%       if n=1
+%         {insert before={[,phantom]}}
+%         {}
+%     },
+%     fit=band,
+%     before computing xy={l=15pt},
+%   }
+%   [\textasciitilde/.config/quickshell/
+%   [Bar.qml (\ref{Bar.qml})]
+%   [Panels/
+%     [RightSidePanel.qml (\ref{RightSidePanel.qml})]
+%   ]
+%   [Popups/
+%     [AppLauncher.qml (\ref{AppLauncher.qml})]
+%     [AppsWorkspaces.qml (\ref{AppsWorkspaces.qml})]
+%     [NotifCenter.qml (\ref{NotifCenter.qml})]
+%     [NotifPopup.qml (\ref{NotifPopup.qml})]
+%     [WorkspaceOverviewWidget.qml (\ref{WorkspaceOverviewWidget.qml})]
+%     [WorkspaceView.qml (\ref{WorkspaceView.qml})]
+%   ]
+%   [Services/
+%     [BatteryStats.qml (\ref{BatteryStats.qml})]
+%     [Brightness.qml (\ref{Brightness.qml})]
+%     [Design.qml (\ref{Design.qml})]
+%     [NotificationHandler.qml (\ref{NotificationHandler.qml})]
+%     [NotificationService.qml (\ref{NotificationService.qml})]
+%     [StatusSaver.qml (\ref{StatusSaver.qml})]
+%     [Time.qml (\ref{Time.qml})]
+%     [Volume.qml (\ref{Volume.qml})]
+%   ]
+%   [shell.qml (\ref{shell.qml})]
+%   [Widgets/
+%     [AppLauncherButton.qml (\ref{AppLauncherButton.qml})]
+%     [AppWorksapcesButton.qml (\ref{AppWorksapcesButton.qml})]
+%     [ClockWidget.qml (\ref{ClockWidget.qml})]
+%     [StatusWidget.qml (\ref{StatusWidget.qml})]
+%     [VirtKeyboardButton.qml (\ref{VirtKeyboardButton.qml})]
+%     [WorkspaceMoverButton.qml (\ref{WorkspaceMoverButton.qml})]
+%     [Workspaces.qml (\ref{Workspaces.qml})]
+%   ]
+% ]\end{forest}} \end{center}
+
 
 \subsection{Použité technologie a nástroje}
 Jazyk, knihovny, frameworky, IDE, verzovací systémy, atd.
