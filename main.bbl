@@ -303,6 +303,97 @@
       \verb https://hg.sr.ht/~scoopta/wofi
       \endverb
     \endentry
+    \entry{singhMannuVilasaraXenonshell2026}{online}{}{}
+      \name{author}{1}{}{%
+        {{hash=325b481e4c6da01e3c96c7031138f9fc}{%
+           family={Mannu},
+           familyi={M\bibinitperiod},
+           given={Vilasara},
+           giveni={V\bibinitperiod}}}%
+      }
+      \strng{namehash}{325b481e4c6da01e3c96c7031138f9fc}
+      \strng{fullhash}{325b481e4c6da01e3c96c7031138f9fc}
+      \strng{fullhashraw}{325b481e4c6da01e3c96c7031138f9fc}
+      \strng{bibnamehash}{325b481e4c6da01e3c96c7031138f9fc}
+      \strng{authorbibnamehash}{325b481e4c6da01e3c96c7031138f9fc}
+      \strng{authornamehash}{325b481e4c6da01e3c96c7031138f9fc}
+      \strng{authorfullhash}{325b481e4c6da01e3c96c7031138f9fc}
+      \strng{authorfullhashraw}{325b481e4c6da01e3c96c7031138f9fc}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Quickshell config somewhat useable}
+      \field{day}{30}
+      \field{hour}{20}
+      \field{minute}{12}
+      \field{month}{3}
+      \field{origday}{8}
+      \field{orighour}{13}
+      \field{origminute}{55}
+      \field{origmonth}{12}
+      \field{origsecond}{29}
+      \field{origtimezone}{Z}
+      \field{origyear}{2025}
+      \field{second}{54}
+      \field{timezone}{Z}
+      \field{title}{{{MannuVilasara}}/Xenon-Shell}
+      \field{urlday}{8}
+      \field{urlmonth}{4}
+      \field{urlyear}{2026}
+      \field{year}{2026}
+      \field{dateera}{ce}
+      \field{origdateera}{ce}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://github.com/MannuVilasara/xenon-shell
+      \endverb
+      \verb{url}
+      \verb https://github.com/MannuVilasara/xenon-shell
+      \endverb
+    \endentry
+    \entry{Neovim}{online}{}{}
+      \list{organization}{1}{%
+        {Neovim}%
+      }
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labeltitlesource}{title}
+      \field{abstract}{hyperextensible Vim-based text editor}
+      \field{langid}{english}
+      \field{title}{Neovim}
+      \field{urlday}{8}
+      \field{urlmonth}{4}
+      \field{urlyear}{2026}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://neovim.io/
+      \endverb
+      \verb{url}
+      \verb https://neovim.io/
+      \endverb
+    \endentry
+    \entry{CachyOSBlazinglyFast}{online}{}{}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labeltitlesource}{title}
+      \field{abstract}{🚀 CachyOS is a performance-optimized Arch Linux distribution with CPU-specific package builds, advanced kernel scheduling, and an effortless installation — delivering measurable speed gains without sacrificing simplicity.}
+      \field{langid}{english}
+      \field{title}{{{CachyOS}}}
+      \field{urlday}{8}
+      \field{urlmonth}{4}
+      \field{urlyear}{2026}
+      \field{urldateera}{ce}
+      \verb{file}
+      \verb /home/maskop/Zotero/storage/6UF52VYG/cachyos.org.html
+      \endverb
+      \verb{urlraw}
+      \verb https://cachyos.org/
+      \endverb
+      \verb{url}
+      \verb https://cachyos.org/
+      \endverb
+    \endentry
   \enddatalist
 \endrefsection
 \endinput

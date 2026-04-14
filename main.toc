@@ -23,24 +23,38 @@
 \contentsline {subsubsection}{\numberline {3.1.2}QuickShell}{8}{subsubsection.3.1.2}%
 \contentsline {paragraph}{\numberline {3.1.2.1}shell.qml}{8}{paragraph.3.1.2.1}%
 \contentsline {paragraph}{\numberline {3.1.2.2}Bar.qml}{8}{paragraph.3.1.2.2}%
-\contentsline {paragraph}{\numberline {3.1.2.3}Workspaces.qml}{9}{paragraph.3.1.2.3}%
-\contentsline {paragraph}{\numberline {3.1.2.4}ClockWidget.qml}{9}{paragraph.3.1.2.4}%
-\contentsline {paragraph}{\numberline {3.1.2.5}AppLauncherButton.qml}{9}{paragraph.3.1.2.5}%
-\contentsline {paragraph}{\numberline {3.1.2.6}Design.qml}{9}{paragraph.3.1.2.6}%
-\contentsline {paragraph}{\numberline {3.1.2.7}Time.qml}{9}{paragraph.3.1.2.7}%
-\contentsline {paragraph}{\numberline {3.1.2.8}NotificationService.qml}{9}{paragraph.3.1.2.8}%
-\contentsline {paragraph}{\numberline {3.1.2.9}AppLauncher.qml}{9}{paragraph.3.1.2.9}%
-\contentsline {paragraph}{\numberline {3.1.2.10}NotifCenter.qml}{9}{paragraph.3.1.2.10}%
-\contentsline {paragraph}{\numberline {3.1.2.11}RightSidePanel.qml}{9}{paragraph.3.1.2.11}%
-\contentsline {subsection}{\numberline {3.2}Použité technologie a nástroje}{9}{subsection.3.2}%
-\contentsline {subsection}{\numberline {3.3}Instalace a spuštění}{9}{subsection.3.3}%
-\contentsline {subsection}{\numberline {3.4}Popis důležitých částí kódu}{9}{subsection.3.4}%
-\contentsline {subsubsection}{\numberline {3.4.1}Spouštění lišty na všech oknech - Bar.qml}{9}{subsubsection.3.4.1}%
-\contentsline {subsubsection}{\numberline {3.4.2}Inicializace widgetů z lišty - Bar.qml}{9}{subsubsection.3.4.2}%
-\contentsline {section}{\numberline {4}Uživatelská dokumentace}{11}{section.4}%
-\contentsline {subsection}{\numberline {4.1}Instalace HYPRSURFACE}{11}{subsection.4.1}%
-\contentsline {section}{\numberline {5}Závěr}{12}{section.5}%
-\contentsline {section}{Zdroje}{13}{section.5}%
+\contentsline {paragraph}{\numberline {3.1.2.3}Design.qml}{9}{paragraph.3.1.2.3}%
+\contentsline {paragraph}{\numberline {3.1.2.4}Workspaces.qml}{9}{paragraph.3.1.2.4}%
+\contentsline {paragraph}{\numberline {3.1.2.5}ClockWidget.qml}{9}{paragraph.3.1.2.5}%
+\contentsline {paragraph}{\numberline {3.1.2.6}Time.qml}{9}{paragraph.3.1.2.6}%
+\contentsline {paragraph}{\numberline {3.1.2.7}AppLauncher.qml}{9}{paragraph.3.1.2.7}%
+\contentsline {paragraph}{\numberline {3.1.2.8}AppLauncherButton.qml}{9}{paragraph.3.1.2.8}%
+\contentsline {paragraph}{\numberline {3.1.2.9}RightSidePanel.qml}{9}{paragraph.3.1.2.9}%
+\contentsline {paragraph}{\numberline {3.1.2.10}NotificationService.qml}{10}{paragraph.3.1.2.10}%
+\contentsline {paragraph}{\numberline {3.1.2.11}NotifCenter.qml}{10}{paragraph.3.1.2.11}%
+\contentsline {subsection}{\numberline {3.2}Použité technologie a nástroje}{10}{subsection.3.2}%
+\contentsline {subsubsection}{\numberline {3.2.1}Jazyky}{10}{subsubsection.3.2.1}%
+\contentsline {paragraph}{\numberline {3.2.1.1}QML}{10}{paragraph.3.2.1.1}%
+\contentsline {paragraph}{\numberline {3.2.1.2}Lua}{10}{paragraph.3.2.1.2}%
+\contentsline {paragraph}{\numberline {3.2.1.3}Shell}{10}{paragraph.3.2.1.3}%
+\contentsline {paragraph}{\numberline {3.2.1.4}Python}{10}{paragraph.3.2.1.4}%
+\contentsline {subsubsection}{\numberline {3.2.2}Frameworky a nástroje}{10}{subsubsection.3.2.2}%
+\contentsline {paragraph}{\numberline {3.2.2.1}Hyprland}{10}{paragraph.3.2.2.1}%
+\contentsline {paragraph}{\numberline {3.2.2.2}Quickshell}{11}{paragraph.3.2.2.2}%
+\contentsline {subsubsection}{\numberline {3.2.3}Verzní systém}{11}{subsubsection.3.2.3}%
+\contentsline {subsubsection}{\numberline {3.2.4}Vývojové prostředí}{11}{subsubsection.3.2.4}%
+\contentsline {subsection}{\numberline {3.3}Popis důležitých částí kódu}{12}{subsection.3.3}%
+\contentsline {subsubsection}{\numberline {3.3.1}Spouštění lišty na všech oknech - Bar.qml}{12}{subsubsection.3.3.1}%
+\contentsline {subsubsection}{\numberline {3.3.2}Inicializace widgetů z lišty - Bar.qml}{13}{subsubsection.3.3.2}%
+\contentsline {subsubsection}{\numberline {3.3.3}Veškeré nastavovací proměnné - Design.qml}{14}{subsubsection.3.3.3}%
+\contentsline {subsubsection}{\numberline {3.3.4}Filtr aplikací podle četnosti a fráze - AppLauncher.qml}{16}{subsubsection.3.3.4}%
+\contentsline {subsubsection}{\numberline {3.3.5}Určování pozice a velikosti masky - RightSidePanel.qml}{17}{subsubsection.3.3.5}%
+\contentsline {section}{\numberline {4}Uživatelská dokumentace}{18}{section.4}%
+\contentsline {subsection}{\numberline {4.1}Instalace HYPRSURFACE}{18}{subsection.4.1}%
+\contentsline {subsection}{\numberline {4.2}Používání HYPRSURFACE}{18}{subsection.4.2}%
+\contentsline {subsection}{\numberline {4.3}Úprava vzhledu HYPRSURFACE}{18}{subsection.4.3}%
+\contentsline {section}{\numberline {5}Závěr}{19}{section.5}%
+\contentsline {section}{Zdroje}{20}{section.5}%
 \babel@toc {czech}{}\relax 
 \babel@toc {czech}{}\relax 
 \babel@toc {czech}{}\relax 
@@ -106,4 +120,26 @@
 \babel@toc {czech}{}\relax 
 \babel@toc {czech}{}\relax 
 \babel@toc {czech}{}\relax 
+\babel@toc {czech}{}\relax 
+\babel@toc {czech}{}\relax 
+\babel@toc {czech}{}\relax 
+\babel@toc {czech}{}\relax 
+\babel@toc {czech}{}\relax 
+\babel@toc {czech}{}\relax 
+\babel@toc {czech}{}\relax 
+\babel@toc {english}{}\relax 
+\babel@toc {czech}{}\relax 
+\babel@toc {english}{}\relax 
+\babel@toc {czech}{}\relax 
+\babel@toc {english}{}\relax 
+\babel@toc {czech}{}\relax 
+\babel@toc {english}{}\relax 
+\babel@toc {czech}{}\relax 
+\babel@toc {english}{}\relax 
+\babel@toc {czech}{}\relax 
+\babel@toc {english}{}\relax 
+\babel@toc {czech}{}\relax 
+\babel@toc {english}{}\relax 
+\babel@toc {czech}{}\relax 
+\babel@toc {english}{}\relax 
 \babel@toc {czech}{}\relax 

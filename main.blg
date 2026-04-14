@@ -1,14 +1,14 @@
 [0] Config.pm:328> INFO - This is Biber 2.21
 [0] Config.pm:331> INFO - Logfile is 'main.blg'
-[44] biber:342> INFO - === Tue Apr 14, 2026, 14:00:26
-[53] Biber.pm:421> INFO - Reading 'main.bcf'
-[91] Biber.pm:1002> INFO - Found 10 citekeys in bib section 0
-[99] Biber.pm:4487> INFO - Processing section 0
-[104] Biber.pm:4678> INFO - Looking for bibtex file 'HYPRSURFACE.bib' for section 0
-[104] bibtex.pm:1713> INFO - LaTeX decoding ...
-[110] bibtex.pm:1519> INFO - Found BibTeX data source 'HYPRSURFACE.bib'
-[140] UCollate.pm:68> INFO - Overriding locale 'cs-CZ' defaults 'variable = shifted' with 'variable = non-ignorable'
-[140] UCollate.pm:68> INFO - Overriding locale 'cs-CZ' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[141] Biber.pm:4307> INFO - Sorting list 'none/global//global/global/global' of type 'entry' with template 'none' and locale 'cs-CZ'
-[146] bbl.pm:676> INFO - Writing 'main.bbl' with encoding 'UTF-8'
-[147] bbl.pm:779> INFO - Output to main.bbl
+[45] biber:342> INFO - === Wed Apr 15, 2026, 01:31:59
+[55] Biber.pm:421> INFO - Reading 'main.bcf'
+[94] Biber.pm:1002> INFO - Found 13 citekeys in bib section 0
+[102] Biber.pm:4487> INFO - Processing section 0
+[108] Biber.pm:4678> INFO - Looking for bibtex file 'HYPRSURFACE.bib' for section 0
+[108] bibtex.pm:1713> INFO - LaTeX decoding ...
+[114] bibtex.pm:1519> INFO - Found BibTeX data source 'HYPRSURFACE.bib'
+[155] UCollate.pm:68> INFO - Overriding locale 'cs-CZ' defaults 'variable = shifted' with 'variable = non-ignorable'
+[155] UCollate.pm:68> INFO - Overriding locale 'cs-CZ' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[155] Biber.pm:4307> INFO - Sorting list 'none/global//global/global/global' of type 'entry' with template 'none' and locale 'cs-CZ'
+[163] bbl.pm:676> INFO - Writing 'main.bbl' with encoding 'UTF-8'
+[165] bbl.pm:779> INFO - Output to main.bbl
