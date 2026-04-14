@@ -425,7 +425,6 @@ Zde nastavujeme různé rozšíření, které nám mohou ulehčit práci.
     jaká tlačítka jsou dostupná a co mají za funkce.
   \begin{itemize}
     \item Pro změnu baru na neprůhledný, přepište \texttt{\justify bar\_color = rgba(000000CC)} na jakoukoliv jinou neprůhlednou barvu.
-
   \end{itemize}
 \end{itemize}
 
@@ -480,60 +479,91 @@ Zde nastavujeme vzhled a chování \emph{Hyprlock} – zamykací obrazovky.
 
 \subsubsection{QuickShell}
 
-% \begin{center} \fbox{ \begin{forest}
-%   for tree={
-%     font=\ttfamily,
-%     grow'=0,
-%     child anchor=west,
-%     parent anchor=south,
-%     anchor=west,
-%     calign=first,
-%     edge path={
-%       \noexpand\path [draw, \forestoption{edge}]
-%       (!u.south west) +(7.5pt,0) |- node[fill,inner sep=1.25pt] {} (.child anchor)\forestoption{edge label};
-%     },
-%     before typesetting nodes={
-%       if n=1
-%         {insert before={[,phantom]}}
-%         {}
-%     },
-%     fit=band,
-%     before computing xy={l=15pt},
-%   }
-%   [\textasciitilde/.config/quickshell/
-%   [Bar.qml (\ref{Bar.qml})]
-%   [Panels/
-%     [RightSidePanel.qml (\ref{RightSidePanel.qml})]
-%   ]
-%   [Popups/
-%     [AppLauncher.qml (\ref{AppLauncher.qml})]
-%     [AppsWorkspaces.qml (\ref{AppsWorkspaces.qml})]
-%     [NotifCenter.qml (\ref{NotifCenter.qml})]
-%     [NotifPopup.qml (\ref{NotifPopup.qml})]
-%     [WorkspaceOverviewWidget.qml (\ref{WorkspaceOverviewWidget.qml})]
-%     [WorkspaceView.qml (\ref{WorkspaceView.qml})]
-%   ]
-%   [Services/
-%     [BatteryStats.qml (\ref{BatteryStats.qml})]
-%     [Brightness.qml (\ref{Brightness.qml})]
-%     [Design.qml (\ref{Design.qml})]
-%     [NotificationHandler.qml (\ref{NotificationHandler.qml})]
-%     [NotificationService.qml (\ref{NotificationService.qml})]
-%     [StatusSaver.qml (\ref{StatusSaver.qml})]
-%     [Time.qml (\ref{Time.qml})]
-%     [Volume.qml (\ref{Volume.qml})]
-%   ]
-%   [shell.qml (\ref{shell.qml})]
-%   [Widgets/
-%     [AppLauncherButton.qml (\ref{AppLauncherButton.qml})]
-%     [AppWorksapcesButton.qml (\ref{AppWorksapcesButton.qml})]
-%     [ClockWidget.qml (\ref{ClockWidget.qml})]
-%     [StatusWidget.qml (\ref{StatusWidget.qml})]
-%     [VirtKeyboardButton.qml (\ref{VirtKeyboardButton.qml})]
-%     [WorkspaceMoverButton.qml (\ref{WorkspaceMoverButton.qml})]
-%     [Workspaces.qml (\ref{Workspaces.qml})]
-%   ]
-% ]\end{forest}} \end{center}
+\begin{center} \fbox{ \begin{forest}
+  for tree={
+    font=\ttfamily,
+    grow'=0,
+    child anchor=west,
+    parent anchor=south,
+    anchor=west,
+    calign=first,
+    edge path={
+      \noexpand\path [draw, \forestoption{edge}]
+      (!u.south west) +(7.5pt,0) |- node[fill,inner sep=1.25pt] {} (.child anchor)\forestoption{edge label};
+    },
+    before typesetting nodes={
+      if n=1
+        {insert before={[,phantom]}}
+        {}
+    },
+    fit=band,
+    before computing xy={l=15pt},
+  }
+  [\textasciitilde/.config/quickshell/
+  [shell.qml (\ref{shell.qml})]
+  [Bar.qml (\ref{Bar.qml})]
+  [Panels/
+    [RightSidePanel.qml (\ref{RightSidePanel.qml})]
+  ]
+  [Popups/
+    [AppLauncher.qml (\ref{AppLauncher.qml})]
+    [NotifCenter.qml (\ref{NotifCenter.qml})]
+    [...]
+  ]
+  [Services/
+    [Design.qml (\ref{Design.qml})]
+    [NotificationService.qml (\ref{NotificationService.qml})]
+    [Time.qml (\ref{Time.qml})]
+    [...]
+  ]
+  [Widgets/
+    [AppLauncherButton.qml (\ref{AppLauncherButton.qml})]
+    [ClockWidget.qml (\ref{ClockWidget.qml})]
+    [Workspaces.qml (\ref{Workspaces.qml})]
+    [...]
+  ]
+]
+\end{forest}} \end{center}
+
+\paragraph{shell.qml}
+\label{shell.qml}
+Tento soubor je hlavní inicializační soubor pro QuickShell. Zde se spouští všechny moduly, které budeme dále používat.
+Pokud by se přidával nový modul, jehož závislost nespočívá v žádném z již inicializovaných modulů.
+
+\paragraph{Bar.qml}
+\label{Bar.qml}
+Tento soubor je kmenovou částí pro lištu. Zde jsou spouštěny veškeré permanentně viditelné widgety.
+Nejdříve se tato lišta spustí na každém monitoru, jak je znázorněno v \ref{Bar.qml 0}. Poté se nastaví,
+kde je lišta připnutá. Poté si pomocí souboru Design.qml (\ref{Design.qml}) nastavíme barvy pro naší lištu.
+Dále poté inicializujeme jednotlivé widgety, které jsou rozděleny do tří částí lišty (levá, pravá, střed),
+jak lze vidět v kódu \ref{Bar.qml 1}.
+
+\paragraph{Workspaces.qml}
+\label{Workspaces.qml}
+
+\paragraph{ClockWidget.qml}
+\label{ClockWidget.qml}
+
+\paragraph{AppLauncherButton.qml}
+\label{AppLauncherButton.qml}
+
+\paragraph{Design.qml}
+\label{Design.qml}
+
+\paragraph{Time.qml}
+\label{Time.qml}
+
+\paragraph{NotificationService.qml}
+\label{NotificationService.qml}
+
+\paragraph{AppLauncher.qml}
+\label{AppLauncher.qml}
+
+\paragraph{NotifCenter.qml}
+\label{NotifCenter.qml}
+
+\paragraph{RightSidePanel.qml}
+\label{RightSidePanel.qml}
 
 
 \subsection{Použité technologie a nástroje}
@@ -543,10 +573,81 @@ Jazyk, knihovny, frameworky, IDE, verzovací systémy, atd.
 Jak projekt nainstalovat, jaké jsou závislosti a jak ho spustit.
 
 \subsection{Popis důležitých částí kódu}
-Příklad s vložením kódu:
-\begin{lstlisting}[language=Python, caption=Ukázkový kód]
-def hello():
-  print("Hello, world!")
+\subsubsection{Spouštění lišty na všech oknech - Bar.qml}
+\label{Bar.qml 0}
+\begin{lstlisting}
+Scope {
+  Variants {
+    model: Quickshell.screens
+
+    PanelWindow {
+      id: barWindow
+
+      ...
+
+      screen: modelData
+
+      ...
+    }
+  }
+}
+\end{lstlisting}
+\subsubsection{Inicializace widgetů z lišty - Bar.qml}
+\label{Bar.qml 1}
+\begin{lstlisting}
+        ...
+
+        // Left
+        RowLayout {
+          anchors {
+            left: parent.left
+            rightMargin: Design.barMargins
+            leftMargin: Design.barMargins
+            verticalCenter: parent.verticalCenter
+          }
+          spacing: 10
+
+          AppLauncherButton {
+            visible: Design.workspacesVisible
+            Layout.preferredHeight: Design.widgetHeight
+          }
+          
+          Workspaces {
+            visible: Design.workspacesVisible
+            Layout.preferredHeight: Design.widgetHeight
+          }
+
+          ...
+        }
+
+        // Center
+        RowLayout {
+          anchors {
+            horizontalCenter: parent.horizontalCenter
+            verticalCenter: parent.verticalCenter
+            leftMargin: 12
+            rightMargin: 12
+          }
+          spacing: 10
+
+          ...
+        }
+
+        // Right
+        RowLayout {
+          anchors {
+            verticalCenter: parent.verticalCenter
+            right: parent.right
+            rightMargin: Design.barMargins
+            leftMargin: Design.barMargins
+          }
+          spacing: 10
+          layoutDirection: Qt.RightToLeft
+
+          ...
+        }
+
+        ...
 \end{lstlisting}
 
 % Uživatelská dokumentace

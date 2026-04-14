@@ -20,14 +20,27 @@
 \contentsline {paragraph}{\numberline {3.1.1.9}windows-workspaces.conf}{7}{paragraph.3.1.1.9}%
 \contentsline {paragraph}{\numberline {3.1.1.10}hypridle.conf}{7}{paragraph.3.1.1.10}%
 \contentsline {paragraph}{\numberline {3.1.1.11}hyprlock.conf}{7}{paragraph.3.1.1.11}%
-\contentsline {subsubsection}{\numberline {3.1.2}QuickShell}{7}{subsubsection.3.1.2}%
-\contentsline {subsection}{\numberline {3.2}Použité technologie a nástroje}{7}{subsection.3.2}%
-\contentsline {subsection}{\numberline {3.3}Instalace a spuštění}{7}{subsection.3.3}%
-\contentsline {subsection}{\numberline {3.4}Popis důležitých částí kódu}{8}{subsection.3.4}%
-\contentsline {section}{\numberline {4}Uživatelská dokumentace}{9}{section.4}%
-\contentsline {subsection}{\numberline {4.1}Instalace HYPRSURFACE}{9}{subsection.4.1}%
-\contentsline {section}{\numberline {5}Závěr}{10}{section.5}%
-\contentsline {section}{Zdroje}{11}{section.5}%
+\contentsline {subsubsection}{\numberline {3.1.2}QuickShell}{8}{subsubsection.3.1.2}%
+\contentsline {paragraph}{\numberline {3.1.2.1}shell.qml}{8}{paragraph.3.1.2.1}%
+\contentsline {paragraph}{\numberline {3.1.2.2}Bar.qml}{8}{paragraph.3.1.2.2}%
+\contentsline {paragraph}{\numberline {3.1.2.3}Workspaces.qml}{9}{paragraph.3.1.2.3}%
+\contentsline {paragraph}{\numberline {3.1.2.4}ClockWidget.qml}{9}{paragraph.3.1.2.4}%
+\contentsline {paragraph}{\numberline {3.1.2.5}AppLauncherButton.qml}{9}{paragraph.3.1.2.5}%
+\contentsline {paragraph}{\numberline {3.1.2.6}Design.qml}{9}{paragraph.3.1.2.6}%
+\contentsline {paragraph}{\numberline {3.1.2.7}Time.qml}{9}{paragraph.3.1.2.7}%
+\contentsline {paragraph}{\numberline {3.1.2.8}NotificationService.qml}{9}{paragraph.3.1.2.8}%
+\contentsline {paragraph}{\numberline {3.1.2.9}AppLauncher.qml}{9}{paragraph.3.1.2.9}%
+\contentsline {paragraph}{\numberline {3.1.2.10}NotifCenter.qml}{9}{paragraph.3.1.2.10}%
+\contentsline {paragraph}{\numberline {3.1.2.11}RightSidePanel.qml}{9}{paragraph.3.1.2.11}%
+\contentsline {subsection}{\numberline {3.2}Použité technologie a nástroje}{9}{subsection.3.2}%
+\contentsline {subsection}{\numberline {3.3}Instalace a spuštění}{9}{subsection.3.3}%
+\contentsline {subsection}{\numberline {3.4}Popis důležitých částí kódu}{9}{subsection.3.4}%
+\contentsline {subsubsection}{\numberline {3.4.1}Spouštění lišty na všech oknech - Bar.qml}{9}{subsubsection.3.4.1}%
+\contentsline {subsubsection}{\numberline {3.4.2}Inicializace widgetů z lišty - Bar.qml}{9}{subsubsection.3.4.2}%
+\contentsline {section}{\numberline {4}Uživatelská dokumentace}{11}{section.4}%
+\contentsline {subsection}{\numberline {4.1}Instalace HYPRSURFACE}{11}{subsection.4.1}%
+\contentsline {section}{\numberline {5}Závěr}{12}{section.5}%
+\contentsline {section}{Zdroje}{13}{section.5}%
 \babel@toc {czech}{}\relax 
 \babel@toc {czech}{}\relax 
 \babel@toc {czech}{}\relax 
