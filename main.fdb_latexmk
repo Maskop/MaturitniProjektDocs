@@ -1,12 +1,12 @@
 # Fdb version 4
-["biber main"] 1776209519.24404 "main.bcf" "main.bbl" "main" 1776210140.46875 0
+["biber main"] 1776284349.50983 "main.bcf" "main.bbl" "main" 1776284934.56546 0
   "HYPRSURFACE.bib" 1776156427.36122 3887 595bf7a7006dda99e845e4214d60245b ""
-  "main.bcf" 1776210140.37017 109985 dd86ffa272ce2bd23cb330d1228c50a4 "pdflatex"
+  "main.bcf" 1776284934.45501 109985 dd86ffa272ce2bd23cb330d1228c50a4 "pdflatex"
   (generated)
   "main.bbl"
   "main.blg"
   (rewritten before read)
-["pdflatex"] 1776210138.81406 "main.tex" "main.pdf" "main" 1776210140.46901 0
+["pdflatex"] 1776284932.80686 "main.tex" "main.pdf" "main" 1776284934.56573 0
   "/usr/local/texlive/2026/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc" 1136849721 2971 def0b6c1f0b107b3b936def894055589 ""
   "/usr/local/texlive/2026/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc" 1136849721 2900 1537cc8184ad1792082cd229ecc269f4 ""
   "/usr/local/texlive/2026/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
@@ -241,13 +241,18 @@
   "/usr/local/texlive/2026/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1775591108 5573038 b99aad5e4898a9034e953632f940512b ""
   "/usr/local/texlive/2026/texmf-var/web2c/pdftex/pdflatex.fmt" 1775591167 3648534 0cfd70b33b0ad70a497ada263f72484f ""
   "/usr/local/texlive/2026/texmf.cnf" 1775591105.13966 455 5b996dcaa0eb4ef14a83b026bc0a008c ""
-  "Photos/Nahled.jpg" 1775574320.88216 81024 f81be34b72e4a7212ed327a62219cd41 ""
-  "main.aux" 1776210140.31317 14484 da83e0e5337fed9df530d55b0979e56c "pdflatex"
-  "main.bbl" 1776209519.9752 13669 cec4db697a427afc8aff38be82caa833 "biber main"
-  "main.out" 1776210140.36917 2489 4c234c0e604f07d79a2d606cbc9eed96 "pdflatex"
-  "main.run.xml" 1776210140.37213 2508 554e9da2f606df727b09a0c9e1e07e3f "pdflatex"
-  "main.tex" 1776210135.8332 39625 1306c42eb4f996cbeda8a32ba0f421ce ""
-  "main.toc" 1776210140.37213 7541 702ba4780d70a8948eb2bff95c13a350 "pdflatex"
+  "Photos/appMoverScreenshot.png" 1775586466.13091 721856 fd24d8801a5913b6e7dd7975ef1421d0 ""
+  "Photos/dateWidgetScreenshot.png" 1775586466.12791 20642 6662251c024ff83b27d4e0e597d74f26 ""
+  "Photos/notifCenterScreenshot.png" 1775586466.12791 156924 8a3784414d0a30860f60342d24cded34 ""
+  "Photos/notifPopupScreenshot.png" 1775586466.13191 81017 e9215399b26f6cb6aaff6beb8ecb7978 ""
+  "Photos/runningAppsMenuScreenshot.png" 1775586466.12891 213521 f4c59c6ec2594f5c714ac6de716f1e84 ""
+  "Photos/topBarScreenshot.png" 1775586466.12691 177856 0cad7073fcb3406e8077d45c8bcca2f4 ""
+  "main.aux" 1776284934.39601 14484 10f9aabb14b7d26a084733c867836d2e "pdflatex"
+  "main.bbl" 1776284350.42954 13669 cec4db697a427afc8aff38be82caa833 "biber main"
+  "main.out" 1776284934.45401 2489 4c234c0e604f07d79a2d606cbc9eed96 "pdflatex"
+  "main.run.xml" 1776284934.45656 2508 554e9da2f606df727b09a0c9e1e07e3f "pdflatex"
+  "main.tex" 1776284932.70503 46173 73c7397c515269639f54533cdf564e36 ""
+  "main.toc" 1776284934.45656 7541 1facaafe20e453fc46982582aea26b61 "pdflatex"
   (generated)
   "main.aux"
   "main.bcf"

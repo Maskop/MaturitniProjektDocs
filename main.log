@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026) (preloaded format=pdflatex 2026.4.7)  15 APR 2026 01:42
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026) (preloaded format=pdflatex 2026.4.7)  15 APR 2026 22:28
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -930,24 +930,24 @@ Package babel Info: Importing data for english
 )
 \openout1 = `main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 94.
-LaTeX Font Info:    ... okay on input line 94.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 94.
-LaTeX Font Info:    ... okay on input line 94.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 94.
-LaTeX Font Info:    ... okay on input line 94.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 94.
-LaTeX Font Info:    ... okay on input line 94.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 94.
-LaTeX Font Info:    ... okay on input line 94.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 94.
-LaTeX Font Info:    ... okay on input line 94.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 94.
-LaTeX Font Info:    ... okay on input line 94.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 94.
-LaTeX Font Info:    ... okay on input line 94.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 94.
-LaTeX Font Info:    ... okay on input line 94.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 97.
+LaTeX Font Info:    ... okay on input line 97.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 97.
+LaTeX Font Info:    ... okay on input line 97.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 97.
+LaTeX Font Info:    ... okay on input line 97.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 97.
+LaTeX Font Info:    ... okay on input line 97.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 97.
+LaTeX Font Info:    ... okay on input line 97.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 97.
+LaTeX Font Info:    ... okay on input line 97.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 97.
+LaTeX Font Info:    ... okay on input line 97.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 97.
+LaTeX Font Info:    ... okay on input line 97.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 97.
+LaTeX Font Info:    ... okay on input line 97.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -983,7 +983,7 @@ LaTeX Font Info:    ... okay on input line 94.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-Package hyperref Info: Link coloring OFF on input line 94.
+Package hyperref Info: Link coloring OFF on input line 97.
 (./main.out) (./main.out)
 \@outlinefile=\write6
 \openout6 = `main.out'.
@@ -1044,16 +1044,11 @@ Package biblatex Info: Automatic encoding selection.
 Package biblatex Info: Trying to load bibliographic data...
 Package biblatex Info: ... file 'main.bbl' found.
  (./main.bbl)
-Package biblatex Info: Reference section=0 on input line 94.
-Package biblatex Info: Reference segment=0 on input line 94.
-<Photos/nahled.jpg, id=66, 1037.8775pt x 1037.8775pt>
-File: Photos/nahled.jpg Graphic file (type jpg)
-<use Photos/nahled.jpg>
-Package pdftex.def Info: Photos/nahled.jpg  used on input line 104.
-(pdftex.def)             Requested size: 420.19191pt x 420.19556pt.
+Package biblatex Info: Reference section=0 on input line 97.
+Package biblatex Info: Reference segment=0 on input line 97.
  [1
 
-{/usr/local/texlive/2026/texmf-var/fonts/map/pdftex/updmap/pdftex.map}{/usr/local/texlive/2026/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc} <./Photos/Nahled.jpg>] [1] (./main.toc
+{/usr/local/texlive/2026/texmf-var/fonts/map/pdftex/updmap/pdftex.map}{/usr/local/texlive/2026/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}] [1] (./main.toc
 LaTeX Font Info:    Trying to load font information for U+msa on input line 4.
  (/usr/local/texlive/2026/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
@@ -1069,9 +1064,9 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.175 \newpage
+l.214 \newpage
                [1] [2] [3] [4{/usr/local/texlive/2026/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}] [5] [6]
-Overfull \hbox (0.37624pt too wide) in paragraph at lines 439--440
+Overfull \hbox (0.37624pt too wide) in paragraph at lines 478--479
 []\T1/cmr/bx/n/12 General sekce\T1/cmr/m/n/12 : p°i-po-juje ex-terní skripty p°i za-mknutí ([][]\T1/cmtt/m/n/12 lock[]\T1/cmr/m/n/12 ), úpravu jasu a p°e-ru-²o-vání [][]\T1/cmtt/m/n/12 numlock[]\T1/cmr/m/n/12 . 
  []
 
@@ -1085,7 +1080,62 @@ Overfull \hbox (0.37624pt too wide) in paragraph at lines 439--440
 
 ] [17
 
-] [18] [19] [20] (./main.aux)
+]
+Underfull \hbox (badness 10000) in paragraph at lines 921--923
+
+ []
+
+<./Photos/topBarScreenshot.png, id=520, 2744.2525pt x 81.30376pt>
+File: ./Photos/topBarScreenshot.png Graphic file (type png)
+<use ./Photos/topBarScreenshot.png>
+Package pdftex.def Info: ./Photos/topBarScreenshot.png  used on input line 924.
+(pdftex.def)             Requested size: 411.62012pt x 12.19502pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 932--934
+
+ []
+
+<./Photos/runningAppsMenuScreenshot.png, id=521, 1140.26pt x 291.0875pt>
+File: ./Photos/runningAppsMenuScreenshot.png Graphic file (type png)
+<use ./Photos/runningAppsMenuScreenshot.png>
+Package pdftex.def Info: ./Photos/runningAppsMenuScreenshot.png  used on input line 935.
+(pdftex.def)             Requested size: 399.09698pt x 101.88214pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 937--940
+
+ []
+
+<./Photos/appMoverScreenshot.png, id=522, 2005.4925pt x 725.71124pt>
+File: ./Photos/appMoverScreenshot.png Graphic file (type png)
+<use ./Photos/appMoverScreenshot.png>
+Package pdftex.def Info: ./Photos/appMoverScreenshot.png  used on input line 942.
+(pdftex.def)             Requested size: 320.88536pt x 116.11617pt.
+<./Photos/dateWidgetScreenshot.png, id=523, 358.33875pt x 81.30376pt>
+File: ./Photos/dateWidgetScreenshot.png Graphic file (type png)
+<use ./Photos/dateWidgetScreenshot.png>
+Package pdftex.def Info: ./Photos/dateWidgetScreenshot.png  used on input line 946.
+(pdftex.def)             Requested size: 200.66833pt x 45.52979pt.
+[18 <./Photos/topBarScreenshot.png (PNG copy)> <./Photos/runningAppsMenuScreenshot.png (PNG copy)> <./Photos/appMoverScreenshot.png (PNG copy)>]
+Underfull \hbox (badness 10000) in paragraph at lines 956--960
+
+ []
+
+<./Photos/notifPopupScreenshot.png, id=529, 413.545pt x 489.83pt>
+File: ./Photos/notifPopupScreenshot.png Graphic file (type png)
+<use ./Photos/notifPopupScreenshot.png>
+Package pdftex.def Info: ./Photos/notifPopupScreenshot.png  used on input line 961.
+(pdftex.def)             Requested size: 148.87608pt x 176.33865pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 964--968
+
+ []
+
+<./Photos/notifCenterScreenshot.png, id=530, 733.74126pt x 975.645pt>
+File: ./Photos/notifCenterScreenshot.png Graphic file (type png)
+<use ./Photos/notifCenterScreenshot.png>
+Package pdftex.def Info: ./Photos/notifCenterScreenshot.png  used on input line 969.
+(pdftex.def)             Requested size: 146.74565pt x 195.12553pt.
+[19 <./Photos/dateWidgetScreenshot.png (PNG copy)> <./Photos/notifPopupScreenshot.png (PNG copy)> <./Photos/notifCenterScreenshot.png (PNG copy)>] [20] [21] [22] (./main.aux)
  ***********
 LaTeX2e <2025-11-01>
 L3 programming layer <2021/03/21>
@@ -1097,18 +1147,18 @@ Package logreq Info: Writing requests to 'main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 45129 strings out of 467349
- 942503 string characters out of 5415642
- 2236799 words of memory out of 5000000
- 73354 multiletter control sequences out of 15000+600000
+ 45198 strings out of 467349
+ 944972 string characters out of 5415642
+ 2236815 words of memory out of 5000000
+ 73421 multiletter control sequences out of 15000+600000
  645723 words of font info for 83 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  126i,12n,126p,1610b,4751s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2026/texmf-dist/fonts/type1/public/cm-super/sfbx1095.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/cm-super/sfbx1440.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/cm-super/sfbx2488.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/cm-super/sfrm0600.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/cm-super/sfrm0700.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/cm-super/sfrm0800.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/cm-super/sfrm1095.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/cm-super/sfrm1440.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/cm-super/sfrm1728.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/cm-super/sfti1200.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/cm-super/sftt1095.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/cm-super/sftt1200.pfb>
-Output written on main.pdf (23 pages, 500442 bytes).
+Output written on main.pdf (25 pages, 1795218 bytes).
 PDF statistics:
- 688 PDF objects out of 1000 (max. 8388607)
- 624 compressed objects within 7 object streams
- 306 named destinations out of 1000 (max. 500000)
- 138 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 703 PDF objects out of 1000 (max. 8388607)
+ 632 compressed objects within 7 object streams
+ 308 named destinations out of 1000 (max. 500000)
+ 163 words of extra memory for PDF output out of 10000 (max. 10000000)
 

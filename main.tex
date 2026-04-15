@@ -15,6 +15,7 @@
 \usepackage{csquotes}
 \usepackage{forest}
 \usepackage[nopar]{kantlipsum}
+\usepackage{graphicx}
 
 % Bibliography %
 \usepackage[
@@ -30,6 +31,8 @@
   {\thesection} % jen číslo kapitoly
   {1em}
   {}
+
+\graphicspath{ {./Photos/} }
 
 % Nastavení pro zdrojové kódy
 \definecolor{codebg}{RGB}{245,245,245}
@@ -101,7 +104,43 @@
     {\Large Dokumentace k maturitní práci\par}
     \vfill
 
-    \includegraphics[width=0.8\textwidth]{Photos/nahled.jpg}
+    \begin{center}
+    \begin{verbatim}
+                                          .+ .                           
+                                        .xx..                           
+                                        .;xx+.                           
+                                        .xxxx+.                          
+                                      .xxxxxx+.                         
+                                      .xxxxxxx+;.                        
+                                      +xxxxxxxx+.                        
+                                    .+xxxxxxxxx+.                       
+                                    .+++++xxxxxx++.                      
+                                    .+++++++++xxx++.                     
+                                  +...+++++++++xx++.                    
+                                  +++++..++++++++++++.                   
+                                +++++++++++++++++++++.                  
+                                ++++++++++++++++++++++;.                 
+                              ++++++++++++++++++++++++;.                
+                            .;+++++++++xxxxxxxxxxxxx+++:.               
+                            ;+++++xxxxxxxxxxxxxxxxxxxxxx.               
+                          .;+++xxxxxxxxxxxxxxxxxxxxxxxxxx.              
+                          .;xxxxxxxxxxxxxx;:xxxxxxxxxxxxxxx.             
+                        .:xxxxxxxxxxxx+..     xxxxxxxxxxxxx.            
+                        .:xxxxxxxxxxxx..       .xxxxxxxxxxxxx.           
+                      .:xxxxxxxxxxxx+.         .xxxxxxxxxxxxx.          
+                      :xxxxxxxxxxxxx...         .xxxxxxxxxxxxx.         
+                      ;xxxxxxxxxxxxxx..          .xxxxxxxxx..xxx.        
+                    ;xxxxxxxxxxxxxxx..           xxxxxxxxxxxx....       
+                  .;xxxxxxxxxxxxxxxx.           .xxxxxxxxxxxxxxx.       
+                  ;xxxxxxxxxxxxxxx:...          ..;xxxxxxxxxxxxxxx.     
+                  +xxxxxxxxxx:.... .  .                ..xxxxxxxxxxx.    
+                +xxxxxxx. .. .                            ..;xxxxxxx.   
+                +xxxx..                                        ..xxxxx.  
+              xxx.  .                                              .xx. 
+              ;.....                                                  ...
+    \end{verbatim}
+    \end{center}
+    % \includegraphics[width=0.8\textwidth]{nahled}
     \vfill
     
     {\large Jáchym Otáhal\par} % Uprav jméno
@@ -561,6 +600,8 @@ a také jeho přečtení. Tato část byla převážně převzta z xenon-shell o
 \autocite{singhMannuVilasaraXenonshell2026} Zároveň zde při vyhledávání filtrujeme podle zadané fráze ve vyhledávacím poli.
 Následně pak aplikace zobrazujeme jako tlačítka s ikonou a názvem aplikace. Znovu se zde velká část designu dá nastavit v 
 Design.qml (\ref{Design.qml}). Tento modul je spouštěn již v shell.qml (\ref{shell.qml}), aby se nemusel opakovaně spouštět.
+Jeho otevření se dá vyvolat změněním viditelnosti v StatusSaver.qml. Tato proměnná je zároveň napojena na ipc call, který
+se dá spustit kdekoliv z systému, což nám dovoluje např. nastavit klávesovou zkratku v Hyprlandu pro otevření tohoto modulu.
 
 \paragraph{AppLauncherButton.qml}
 \label{AppLauncherButton.qml}
@@ -872,9 +913,74 @@ CachyOS. \autocite{CachyOSBlazinglyFast} Stáhneme si ji na \href{https://cachyo
 ujistěte se, že si stahujete desktop edici. Dále postupujte podle instukcí na \href{https://wiki.cachyos.org/installation/installation_on_root/}
 {wiki CachyOS} pro stažení desktop edice s Hyprland.
 
+Když se dostanete do systému, otevřete si pomocí klávesové zkratky \verb|SUPER+Q| terminál a spusťte firefox. Ve firefoxu si najděte
+tento projekt na githubu. Zde si najděte v README instrukce, pro to co zadat do terminálu, aby se systém nainstaloval. Poté už jen
+počkejte až se systém nainstaluje, tato akce může trvat několik minut, a automaticky restartuje.
+
 \subsection{Používání HYPRSURFACE}
+Horní lišta v základním nastavení obsahuje 6 widgetů.
+\newline
+\begin{center}
+\includegraphics[scale=0.15]{topBarScreenshot}
+\end{center}
+
+\begin{itemize}
+  \item \textbf{Spouštěč aplikací:} je v levém horním rohu s logem Archlinuxu a funguje jako přepínač stavu aplikačního spouštěče.
+    Dále si souštěč více rozvedeme.
+  \item \textbf{Pracovní prostředí:} jsou možné vidět také v levé části lišty. Světle svítí to prostředí, které je právě viditelné, a 
+    ta co obshují nějakou aplikaci, ale nejsou vidět, mají jen modrý akcent textu.
+  \item \textbf{Spuštěná okna:} zde se dá cíleně přepínat mezi otevřenými okny a dají se zde i zavírat.
+    \newline
+    \begin{center}
+      \includegraphics[scale=0.35]{runningAppsMenuScreenshot}
+    \end{center}
+  \item \textbf{Přesouvač oken mezi prostředími:} je overlay, který nám dovoluje přesunout aplikaci mezi rozdílnými pracovními
+    prostředími.
+    \newline
+    \begin{center}
+      \centering
+      \includegraphics[scale=0.16]{appMoverScreenshot}
+    \end{center}
+  \item \textbf{Hodiny:} zde se zobrazují hodiny, pro přepnutí na datum stačí na widget kliknout.
+    \begin{center}
+      \includegraphics[scale=0.56]{dateWidgetScreenshot}
+    \end{center}
+
+  \item \textbf{Status:} je více věcí v jednom widgetu, ovládat se dá pouze zvuk. Kliknutím na ikonku reproduktoru se dá přepínat mezi
+    stádiem vypnutí a zapnutí zvuku.
+\end{itemize}
+
+Poté zde máme ještě vyskakovací okna.
+
+\begin{itemize}
+  \item \textbf{Vyskakovací notifikace:} zobrazují aktuální notifikace na krátkou dobu, dají se zde odkliknout pomocí křížku vpravo
+    nahoře. První řádek je název aplikace, druhý je shrnutí a třetí je obsah notifikace. Někdy se může zobrazovat méně řádků, 
+    protože aplikace ne vždy obsáhne všechny pole, z toho důvodu jsou někdy schované.
+    \newline
+    \begin{center}
+      \includegraphics[scale=0.36]{notifPopupScreenshot}
+    \end{center}
+
+  \item \textbf{Notifikační centrum:} obsahuje veškerá notifikace, každá má stejné specifikace jako u vyskakovací notifikace. Aby
+    jste otevřeli centrum, můžete najet myší na pravou hranu monitoru, kde je lehce vidět hrana tohoto centra, nebo v dotykovém
+    módu stačí na centrum kliknout a centrum se otevře.
+    \newline
+    \begin{center}
+      \includegraphics[scale=0.20]{notifCenterScreenshot}
+    \end{center}
+
+  \item \textbf{Aplikační spouštěč:} se dá spustit buď přes klávesovou zkratku \verb|SUPER+TAB| a nebo pomocí tlačítka v levém
+    horním rohu. Nahoře je lištu s vyhledávacím políčkem pro aplikace. Orientovat se můžeme buď myší, touchpadem, dotykovou obrazovkou 
+    a nebo šipkami na klávesnici.
+\end{itemize}
+
+
 
 \subsection{Úprava vzhledu HYPRSURFACE}
+Vzhled se dá upravovat na většině úrovní. Pokud chcete změnit vzhled lišty, vyskakovacích oken a widgetů, tak můžete přepsat barvy v souboru
+\texttt{\justify \textasciitilde/.config/quickshell/Services/Design.qml}. Jinak můžeme měnit ještě pozadí, buďto pomocí vyskakovacího
+okna (\verb|SUPER+W|), které bere obrázky z \texttt{\justify \textasciitilde/Pictures/Wallpapers} a nabízí jejich náhledy, nebo pomocí
+terminálu, kde napíšte \texttt{\justify awww <path-to-picture>}.
 
 % Závěr
 \newpage

@@ -52,9 +52,9 @@
 \contentsline {section}{\numberline {4}Uživatelská dokumentace}{18}{section.4}%
 \contentsline {subsection}{\numberline {4.1}Instalace HYPRSURFACE}{18}{subsection.4.1}%
 \contentsline {subsection}{\numberline {4.2}Používání HYPRSURFACE}{18}{subsection.4.2}%
-\contentsline {subsection}{\numberline {4.3}Úprava vzhledu HYPRSURFACE}{18}{subsection.4.3}%
-\contentsline {section}{\numberline {5}Závěr}{19}{section.5}%
-\contentsline {section}{Zdroje}{20}{section.5}%
+\contentsline {subsection}{\numberline {4.3}Úprava vzhledu HYPRSURFACE}{20}{subsection.4.3}%
+\contentsline {section}{\numberline {5}Závěr}{21}{section.5}%
+\contentsline {section}{Zdroje}{22}{section.5}%
 \babel@toc {czech}{}\relax 
 \babel@toc {czech}{}\relax 
 \babel@toc {czech}{}\relax 
