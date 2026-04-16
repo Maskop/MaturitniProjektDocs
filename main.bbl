@@ -394,6 +394,25 @@
       \verb https://cachyos.org/
       \endverb
     \endentry
+    \entry{DanihekHellwalPywallike}{online}{}{}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labeltitlesource}{title}
+      \field{title}{Danihek/Hellwal: {{Pywal-like}} Color Palette Generator, but Faster and in {{C}}}
+      \field{urlday}{16}
+      \field{urlmonth}{4}
+      \field{urlyear}{2026}
+      \field{urldateera}{ce}
+      \verb{file}
+      \verb /home/maskop/Zotero/storage/T2YJXDIE/hellwal.html
+      \endverb
+      \verb{urlraw}
+      \verb https://github.com/danihek/hellwal
+      \endverb
+      \verb{url}
+      \verb https://github.com/danihek/hellwal
+      \endverb
+    \endentry
   \enddatalist
 \endrefsection
 \endinput
