@@ -2,7 +2,7 @@
 \contentsline {section}{\numberline {1}Úvod}{1}{section.1}%
 \contentsline {section}{\numberline {2}Linux dokumentace}{2}{section.2}%
 \contentsline {subsection}{\numberline {2.1}I use Arch BTW}{2}{subsection.2.1}%
-\contentsline {subsection}{\numberline {2.2}Jak jen budeme ovládat naše okna? No jó, Hyprland}{2}{subsection.2.2}%
+\contentsline {subsection}{\numberline {2.2}Jak jen budeme ovládat okna? No jó, Hyprland}{2}{subsection.2.2}%
 \contentsline {subsubsection}{\numberline {2.2.1}Co je window manager a jeho typy}{2}{subsubsection.2.2.1}%
 \contentsline {subsubsection}{\numberline {2.2.2}Ten náš Hyprland}{2}{subsubsection.2.2.2}%
 \contentsline {subsection}{\numberline {2.3}Co na UI? QuickShell!}{3}{subsection.2.3}%
@@ -41,7 +41,7 @@
 \contentsline {subsubsection}{\numberline {3.2.2}Frameworky a nástroje}{10}{subsubsection.3.2.2}%
 \contentsline {paragraph}{\numberline {3.2.2.1}Hyprland}{10}{paragraph.3.2.2.1}%
 \contentsline {paragraph}{\numberline {3.2.2.2}Quickshell}{11}{paragraph.3.2.2.2}%
-\contentsline {subsubsection}{\numberline {3.2.3}Verzní systém}{11}{subsubsection.3.2.3}%
+\contentsline {subsubsection}{\numberline {3.2.3}Verzovací systém}{11}{subsubsection.3.2.3}%
 \contentsline {subsubsection}{\numberline {3.2.4}Vývojové prostředí}{11}{subsubsection.3.2.4}%
 \contentsline {subsection}{\numberline {3.3}Popis důležitých částí kódu}{12}{subsection.3.3}%
 \contentsline {subsubsection}{\numberline {3.3.1}Spouštění lišty na všech oknech - Bar.qml}{12}{subsubsection.3.3.1}%
@@ -52,9 +52,10 @@
 \contentsline {section}{\numberline {4}Uživatelská dokumentace}{18}{section.4}%
 \contentsline {subsection}{\numberline {4.1}Instalace HYPRSURFACE}{18}{subsection.4.1}%
 \contentsline {subsection}{\numberline {4.2}Používání HYPRSURFACE}{18}{subsection.4.2}%
-\contentsline {subsection}{\numberline {4.3}Úprava vzhledu HYPRSURFACE}{20}{subsection.4.3}%
-\contentsline {section}{\numberline {5}Závěr}{21}{section.5}%
-\contentsline {section}{Zdroje}{22}{section.5}%
+\contentsline {subsection}{\numberline {4.3}Úprava vzhledu HYPRSURFACE}{19}{subsection.4.3}%
+\contentsline {section}{\numberline {5}Obrázky}{20}{section.5}%
+\contentsline {section}{\numberline {6}Závěr}{22}{section.6}%
+\contentsline {section}{Zdroje}{23}{section.6}%
 \babel@toc {czech}{}\relax 
 \babel@toc {czech}{}\relax 
 \babel@toc {czech}{}\relax 
