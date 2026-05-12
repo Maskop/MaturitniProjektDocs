@@ -1,12 +1,12 @@
 # Fdb version 4
-["biber main"] 1778351339.00472 "main.bcf" "main.bbl" "main" 1778351341.75152 0
+["biber main"] 1778351339.00472 "main.bcf" "main.bbl" "main" 1778606027.66421 0
   "HYPRSURFACE.bib" 1778351237.01075 4150 a4004c5639e12a5433be59dbf6734394 ""
-  "main.bcf" 1778351341.64547 110064 f7729e22b404a0fe2b0b5ee8afa53c1e "pdflatex"
+  "main.bcf" 1778606027.55586 110064 f7729e22b404a0fe2b0b5ee8afa53c1e "pdflatex"
   (generated)
   "main.bbl"
   "main.blg"
   (rewritten before read)
-["pdflatex"] 1778351339.88203 "main.tex" "main.pdf" "main" 1778351341.7519 0
+["pdflatex"] 1778606025.68809 "main.tex" "main.pdf" "main" 1778606027.66445 0
   "/opt/texlive/2026/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc" 1778341106 2971 def0b6c1f0b107b3b936def894055589 ""
   "/opt/texlive/2026/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc" 1778341106 2900 1537cc8184ad1792082cd229ecc269f4 ""
   "/opt/texlive/2026/texmf-dist/fonts/map/fontname/texfonts.map" 1778341106 3524 cb3e574dea2d1052e39280babc910dc8 ""
@@ -241,19 +241,19 @@
   "/opt/texlive/2026/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1778341106 5573026 1e47006965456199544b38b6c8798594 ""
   "/opt/texlive/2026/texmf-var/web2c/pdftex/pdflatex.fmt" 1778341106 3648843 33658d0407b9b7fbf46d171e7d53c24a ""
   "/opt/texlive/2026/texmf.cnf" 1778341106 585 d90dcc7e4cbb41f80da762fdc25fd0ea ""
-  "Photos/Nahled.jpg" 1777809288.64919 81024 f81be34b72e4a7212ed327a62219cd41 ""
   "Photos/appMoverScreenshot.png" 1777809288.63619 721856 fd24d8801a5913b6e7dd7975ef1421d0 ""
   "Photos/dateWidgetScreenshot.png" 1777809288.64104 20642 6662251c024ff83b27d4e0e597d74f26 ""
+  "Photos/logo_gp.png" 1777809288.65089 10185 8ecc988e0aeb345a19df29a4e3fcb92e ""
   "Photos/notifCenterScreenshot.png" 1777809288.63919 156924 8a3784414d0a30860f60342d24cded34 ""
   "Photos/notifPopupScreenshot.png" 1777809288.62719 81017 e9215399b26f6cb6aaff6beb8ecb7978 ""
   "Photos/runningAppsMenuScreenshot.png" 1777809288.64419 213521 f4c59c6ec2594f5c714ac6de716f1e84 ""
   "Photos/topBarScreenshot.png" 1777809288.64719 177856 0cad7073fcb3406e8077d45c8bcca2f4 ""
-  "main.aux" 1778351341.58147 16167 2631e28eaa7cdb9c92113fd80a599149 "pdflatex"
+  "main.aux" 1778606027.49186 16167 2631e28eaa7cdb9c92113fd80a599149 "pdflatex"
   "main.bbl" 1778351339.84945 14322 1f76a59810d0398ce8a452568c0b6160 "biber main"
-  "main.out" 1778351341.64447 2540 8e6de72b0c25fcc8d1927dd01e9816c2 "pdflatex"
-  "main.run.xml" 1778351341.64694 2508 554e9da2f606df727b09a0c9e1e07e3f "pdflatex"
-  "main.tex" 1778351320.48925 48985 2c4b28a25a40ecd94213ede9294c1bcb ""
-  "main.toc" 1778351341.64694 7771 222ab55753389ddfd4defd86783b9d6c "pdflatex"
+  "main.out" 1778606027.55486 2540 8e6de72b0c25fcc8d1927dd01e9816c2 "pdflatex"
+  "main.run.xml" 1778606027.55757 2508 554e9da2f606df727b09a0c9e1e07e3f "pdflatex"
+  "main.tex" 1778606018.77182 48990 e002dd53faaef04613071f2d3049bd64 ""
+  "main.toc" 1778606027.55757 7771 222ab55753389ddfd4defd86783b9d6c "pdflatex"
   (generated)
   "main.aux"
   "main.bcf"

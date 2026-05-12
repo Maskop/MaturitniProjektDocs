@@ -386,10 +386,10 @@ INPUT main.bbl
 INPUT /opt/texlive/2026/texmf-dist/fonts/tfm/jknappen/ec/ecrm2488.tfm
 INPUT /opt/texlive/2026/texmf-dist/fonts/tfm/jknappen/ec/ecbx2488.tfm
 INPUT /opt/texlive/2026/texmf-dist/fonts/tfm/jknappen/ec/ecrm1728.tfm
-INPUT ./Photos/Nahled.jpg
-INPUT ./Photos/Nahled.jpg
-INPUT ./Photos/Nahled.jpg
-INPUT ./Photos/Nahled.jpg
+INPUT ./Photos/logo_gp.png
+INPUT ./Photos/logo_gp.png
+INPUT ./Photos/logo_gp.png
+INPUT ./Photos/logo_gp.png
 INPUT /opt/texlive/2026/texmf-dist/fonts/tfm/jknappen/ec/ecrm1440.tfm
 INPUT /opt/texlive/2026/texmf-var/fonts/map/pdftex/updmap/pdftex.map
 INPUT /opt/texlive/2026/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc

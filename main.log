@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026) (preloaded format=pdflatex 2026.5.9)  9 MAY 2026 20:29
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026) (preloaded format=pdflatex 2026.5.9)  12 MAY 2026 19:13
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1045,14 +1045,14 @@ Package biblatex Info: ... file 'main.bbl' found.
  (./main.bbl)
 Package biblatex Info: Reference section=0 on input line 97.
 Package biblatex Info: Reference segment=0 on input line 97.
-<./Photos/nahled.jpg, id=70, 1037.8775pt x 1037.8775pt>
-File: ./Photos/nahled.jpg Graphic file (type jpg)
-<use ./Photos/nahled.jpg>
-Package pdftex.def Info: ./Photos/nahled.jpg  used on input line 143.
-(pdftex.def)             Requested size: 420.19191pt x 420.19556pt.
+<./Photos/logo_gp.png, id=70, 135.50626pt x 90.3375pt>
+File: ./Photos/logo_gp.png Graphic file (type png)
+<use ./Photos/logo_gp.png>
+Package pdftex.def Info: ./Photos/logo_gp.png  used on input line 143.
+(pdftex.def)             Requested size: 420.19191pt x 280.1398pt.
  [1
 
-{/opt/texlive/2026/texmf-var/fonts/map/pdftex/updmap/pdftex.map}{/opt/texlive/2026/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc} <./Photos/Nahled.jpg>] [1] (./main.toc
+{/opt/texlive/2026/texmf-var/fonts/map/pdftex/updmap/pdftex.map}{/opt/texlive/2026/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc} <./Photos/logo_gp.png>] [1] (./main.toc
 LaTeX Font Info:    Trying to load font information for U+msa on input line 4.
  (/opt/texlive/2026/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
@@ -1085,22 +1085,22 @@ Overfull \hbox (0.37624pt too wide) in paragraph at lines 477--478
 ] [17
 
 ] [18] [19]
-<./Photos/topBarScreenshot.png, id=548, 2744.2525pt x 81.30376pt>
+<./Photos/topBarScreenshot.png, id=550, 2744.2525pt x 81.30376pt>
 File: ./Photos/topBarScreenshot.png Graphic file (type png)
 <use ./Photos/topBarScreenshot.png>
 Package pdftex.def Info: ./Photos/topBarScreenshot.png  used on input line 970.
 (pdftex.def)             Requested size: 411.62012pt x 12.19502pt.
-<./Photos/runningAppsMenuScreenshot.png, id=549, 1140.26pt x 291.0875pt>
+<./Photos/runningAppsMenuScreenshot.png, id=551, 1140.26pt x 291.0875pt>
 File: ./Photos/runningAppsMenuScreenshot.png Graphic file (type png)
 <use ./Photos/runningAppsMenuScreenshot.png>
 Package pdftex.def Info: ./Photos/runningAppsMenuScreenshot.png  used on input line 977.
 (pdftex.def)             Requested size: 399.09698pt x 101.88214pt.
-<./Photos/appMoverScreenshot.png, id=550, 2005.4925pt x 725.71124pt>
+<./Photos/appMoverScreenshot.png, id=552, 2005.4925pt x 725.71124pt>
 File: ./Photos/appMoverScreenshot.png Graphic file (type png)
 <use ./Photos/appMoverScreenshot.png>
 Package pdftex.def Info: ./Photos/appMoverScreenshot.png  used on input line 984.
 (pdftex.def)             Requested size: 320.88536pt x 116.11617pt.
-<./Photos/dateWidgetScreenshot.png, id=551, 358.33875pt x 81.30376pt>
+<./Photos/dateWidgetScreenshot.png, id=553, 358.33875pt x 81.30376pt>
 File: ./Photos/dateWidgetScreenshot.png Graphic file (type png)
 <use ./Photos/dateWidgetScreenshot.png>
 Package pdftex.def Info: ./Photos/dateWidgetScreenshot.png  used on input line 991.
@@ -1109,7 +1109,7 @@ Package pdftex.def Info: ./Photos/dateWidgetScreenshot.png  used on input line 9
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<./Photos/notifPopupScreenshot.png, id=552, 413.545pt x 489.83pt>
+<./Photos/notifPopupScreenshot.png, id=554, 413.545pt x 489.83pt>
 File: ./Photos/notifPopupScreenshot.png Graphic file (type png)
 <use ./Photos/notifPopupScreenshot.png>
 Package pdftex.def Info: ./Photos/notifPopupScreenshot.png  used on input line 998.
@@ -1117,7 +1117,7 @@ Package pdftex.def Info: ./Photos/notifPopupScreenshot.png  used on input line 9
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<./Photos/notifCenterScreenshot.png, id=553, 733.74126pt x 975.645pt>
+<./Photos/notifCenterScreenshot.png, id=555, 733.74126pt x 975.645pt>
 File: ./Photos/notifCenterScreenshot.png Graphic file (type png)
 <use ./Photos/notifCenterScreenshot.png>
 Package pdftex.def Info: ./Photos/notifCenterScreenshot.png  used on input line 1005.
@@ -1139,18 +1139,18 @@ Package logreq Info: Writing requests to 'main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 45277 strings out of 467349
- 945046 string characters out of 5390873
+ 45272 strings out of 467349
+ 944977 string characters out of 5390873
  2238311 words of memory out of 5000000
- 73486 multiletter control sequences out of 15000+600000
+ 73481 multiletter control sequences out of 15000+600000
  645723 words of font info for 83 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  126i,12n,126p,1610b,4753s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </opt/texlive/2026/texmf-dist/fonts/type1/public/cm-super/sfbx1095.pfb></opt/texlive/2026/texmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb></opt/texlive/2026/texmf-dist/fonts/type1/public/cm-super/sfbx1440.pfb></opt/texlive/2026/texmf-dist/fonts/type1/public/cm-super/sfbx2488.pfb></opt/texlive/2026/texmf-dist/fonts/type1/public/cm-super/sfrm0600.pfb></opt/texlive/2026/texmf-dist/fonts/type1/public/cm-super/sfrm0700.pfb></opt/texlive/2026/texmf-dist/fonts/type1/public/cm-super/sfrm0800.pfb></opt/texlive/2026/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb></opt/texlive/2026/texmf-dist/fonts/type1/public/cm-super/sfrm1095.pfb></opt/texlive/2026/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb></opt/texlive/2026/texmf-dist/fonts/type1/public/cm-super/sfrm1440.pfb></opt/texlive/2026/texmf-dist/fonts/type1/public/cm-super/sfrm1728.pfb></opt/texlive/2026/texmf-dist/fonts/type1/public/cm-super/sfti1200.pfb></opt/texlive/2026/texmf-dist/fonts/type1/public/cm-super/sftt1095.pfb></opt/texlive/2026/texmf-dist/fonts/type1/public/cm-super/sftt1200.pfb>
-Output written on main.pdf (26 pages, 1882082 bytes).
+Output written on main.pdf (26 pages, 1809481 bytes).
 PDF statistics:
- 732 PDF objects out of 1000 (max. 8388607)
- 659 compressed objects within 7 object streams
+ 734 PDF objects out of 1000 (max. 8388607)
+ 660 compressed objects within 7 object streams
  318 named destinations out of 1000 (max. 500000)
  176 words of extra memory for PDF output out of 10000 (max. 10000000)
 
